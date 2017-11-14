@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Front-End - Week 1</title>
+    <meta name="description" content="A front-end web development course by Grand Circus Detroit">
+    <meta name="author" content="Jeseekia Vaughn">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!--Grand Circus branded theme -->
+    <link rel="stylesheet" href="reveal/gc/gc.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="reveal/css/main.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="reveal/gc/photo/gcreveallogo.png"></a>
+    </header>
+    <div class="reveal convex center">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <section class="slides">
+        <!-- DAY 4 -->
+        <section data-markdown>
+          ##Intro to Web Development Part One: HTML &amp; CSS
+          ###Week 2 Session 2
+        </section>
+        <section data-markdown>
+          ##Goals for tonight
+          - CSS Positioning
+          - CSS Pseudo-classes & selectors
+          - CSS Fonts
+          - HTML5 Semantics & Elements
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ##CSS Positioning
+          </section>
+          <section data-markdown class="align-left">
+            ###CSS Positioning
+            Every HTML element has a property called `position` which dictates how that element flows on a document. This property can be set to a number of different values, each of which behave slightly differently. This gives a web developer greater control over the design and overall look of a page.
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ##static positioning
+          </section>
+          <section data-markdown class="align-left">
+            ###static positioning
+            Static positioning is the default for all HTML elements. And it adheres to the previously discussed behavior of block and inline elements. Block elements flow from top to bottom and each element appears on a new line. Inline elements flow from left to right, wrapping as needed.
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## relative positioning
+          </section>
+          <section data-markdown class="align-left">
+            ###relative positioning
+            Relative positioned elements appear in the normal flow of the document but can be offset by using the top, bottom, left and right properties.
+          </section>
+          <section data-markdown>
+            ### relative positioning
+            Demo
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## Absolute positioning
+          </section>
+          <section data-markdown class="align-left">
+            ### Absolute positioning
+            Absolutely positioned are removed from the normal flow of the document. They are not affected by and do not affect other elements in the flow, regardless of their position in the document.
+          </section>
+          <section data-markdown class="align-left">
+            ### Absolute positioning
+            Absolute positioned elements appear relative to their parent container elements, using the top/bottom/right/left properties for offsets.
+          </section>
+          <section data-markdown class="align-left">
+            ### Absolute positioning
+            You can think of absolutely positioned elements as being stuck onto a page with a magnet. Once placed, they don't move.
+          </section>
+          <section data-markdown>
+            ### Absolute positioning
+            Demo
+          </section>
+        </section>
+        <section>
+          <section data-markdown class='align-left'>
+            ## Fixed Positioning
+          </section>
+          <section data-markdown class="align-left">
+            ###Fixed positioning
+            Fixed positioned elements are very similar to absolutely positioned elements. Fixed positioned elements are also removed from the normal flow of the document. They are not affected by and do not affect other elements in the flow, regardless of their position in the document.
+          </section>
+          <section data-markdown class="align-left">
+            ### fixed positioning
+            Fixed positioned elements appear relative to the view port (the browser window), using the top/bottom/right/left properties for offsets.
+          </section>
+          <section data-markdown class="align-left">
+            ### fixed positioning
+            Fixed elements do not move when you scroll up or down the page. They are fixed to the window.
+          </section>
+          <section data-markdown>
+            ### Fixed positioning
+            Demo
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## Float
+          </section>
+          <section data-markdown class="align-left">
+            ### Float
+            "Floating" takes an element in the normal flow and pushes it as far to the left or right of its parent element as possible. When an element is floated, other elements will wrap around it
+          </section>
+          <section data-markdown class="align-left">
+            ### Float
+            - Always specify a width when floating an element
+            - Specify whether an element should float left or right
+            - If two or more elements are floated, they will 'stack up' on whichever side they are floated to.
+          </section>
+          <section data-markdown >
+            ### Float
+            ![float demo](images/floatDemo.png)
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## Clear
+          </section>
+          <section data-markdown class="align-left">
+            ### Clear
+            Clear specifies on which side of an element other elements cannot appear. You can clear left, right, or both.
+          </section>
+          <section data-markdown>
+            ### Float
+            ![float demo](images/clearDemo.png)
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## Z-index
+          </section>
+          <section data-markdown class="align-left">
+            ### z-index
+            When elements are moved out of the normal flow of content, they can overlap. Z-index can be used to define the order of overlapping elements. The element with the highest z-index goes on top.
+          </section>
+          <section data-markdown>
+            ### Z-index
+            Demo
+          </section>
+        </section>
+        <!-- STUFF ABOUT INLINE BLOCK HERE -->
+        <section>
+          <section data-markdown class='align-left'>
+            ## Inline-block
+          </section>
+          <section data-markdown class='align-left'>
+            ### Inline-block
+
+            So floats and clears can be a pain but there's an easier way. It's a display property called `inline-block. It does a lot of things that float does without the weird side-effects.
+
+            ![Inline vs Block](images/block_inline.png)
+          </section>
+        </section>
+        <section data-markdown>
+          ## Recap
+          You should understand and be able to use:
+          - Positioning Properties (Static, Relative, Absolute)
+          - Floats
+          - Clear
+        </section>
+        <section>
+          <section data-markdown>
+            ## Code Along
+            ###CSS Positioning
+          </section>
+          <section>
+            <h2>Code Along</h2>
+            <ul>
+              <li>New Project (index.html, main.css)</li>
+              <li>Create a basic HTML site</li>
+              <li>Add 4 divs and add some content to each</li>
+              <li>Float 2 of the divs so that they rest side-by-side</li>
+              <li>In another of the divs, use relative positioning to offset some content inside the div</li>
+              <li>In the last div, attach the content to the viewport using fixed positioning. Add enough height to the body tag to scroll up and down</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## HTML5
+          </section>
+          <section data-markdown>
+            ###HTML5
+            HTML5 is a new spec from the W3C that expands the language of HTML and adds a bunch of new features.
+          </section>
+          <section data-markdown>
+            ###HTML5
+            We don't have time to go into all the details of all of HTML5's new features. Here are some highlights:
+            - New semantic tags
+            - Multimedia (new Audio and Video tags)
+            - Offline storage (local storage)
+            - 3d graphics support
+            - CSS3 animations and effects
+          </section>
+          <section data-markdown>
+            ###HTML5
+            We will take a very brief look at a number of the HTML semantic tags that are available for use in your projects.
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown class='table-32px'>
+            ###new HTML5 tags
+            class | Description
+            --- | ---
+            `section` | Container tag used for page organization
+            `header` | Container for introductory and navigational stuff
+            `footer` | Container for footer content (site map, internal links, etc.)
+            `nav` | Container for a major block of navigation links
+            `audio` | Multimedia tag for playing audio files
+            `video` | Multimedia tag for playing video files
+            `canvas` | element can be used to draw graphics via JavaScript
+          </section>
+          <section data-markdown>
+            ###resources
+            - [HTML5 Please](http://html5please.com)
+            - [HTML5 Rocks](http://html5rocks.com)
+            - [CanIUse Compatibility Tables](http://caniuse.com)
+          </section>
+        </section>
+        <section data-markdown>
+          ## Questions
+        </section>
+        <section>
+          <section data-markdown>
+            ## CSS Psuedo-classes and psuedo-selectors
+          </section>
+          <section data-markdown>
+            ###CSS Psuedoclasses
+            Psuedo-classes are used to add special effects to some selectors.
+          </section>
+          <section data-markdown>
+            ### Psuedo-class syntax
+            `selector:psuedo-class { property:value }`
+            `selector.class:psuedo-class { property:value }`
+          </section>
+          <section >
+            <h3>Anchor Psuedo-classes</h3>
+                          <pre>
+                                <code class='css'>a:link { color: aliceblue; } /* unvisited link */
+                            a:visited { color: darkblue; } /* visited link */
+                            a:hover { color: lightblue; } /* mouse over link */
+                            a:active { color: yellow; } /* mouse click link */
+                                </code>
+            </pre>
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section data-markdown class='table-32px'>
+          ### Other psuedo-classes
+          class | Description
+          --- | ---
+          `:first-child` | Any element which is the first child of its parent
+          `:first-letter` | First letter of an element's content
+          `:first-line` | First line of an element's content
+          `:last-child` | Any element which is the last child of its parent
+          `:only-child` | Any element which is the only child of its parent
+          `:empty` | Any element which has no content
+          `:nth-child` | Any element which is the nth child of its parent
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ### nth-child syntax
+            `:nth-child` takes a mathmatic express to determine which children to select.
+            ```css
+            element:nth-child(an + b) { property:value; }
+            ```
+          </section>
+          <section data-markdown>
+            ### nth-child examples
+            These expressions can be as complex as you want. Feel free to mess around with it.
+            ```css
+            div:nth-child(3) { color:red; } /* Selects the third div */
+            p:nth-child(4n) { color:blue; } /* Selects every fourth div */
+            ul:nth-child:(2n + 5) { color:yellow; } /* Selects every second div,
+            starting with the fifth */
+            ```
+          </section>
+          <section data-markdown>
+            ### nth-child examples
+            Realistically though, in practice `nth-child` is usually only used to alternate styles for large groups of data like table rows, etc.
+            ```css
+            element:nth-child(even) { property:value; }
+            element:nth-child(odd) { property:value; }`
+            ```
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## @font-face
+          </section>
+          <section data-markdown>
+            ###@font-face
+            The @font-face property allows you to use non-default fonts on your web sites
+          </section>
+          <section >
+            <h3>@font-face usage</h3>
+            <pre>
+              <code class='css'>
+    @font-face {
+      font-family: 'myCoolFont';
+        src: url('path/to/myCoolFont.ttf');
+      }
+      div.demo {
+        font-family: 'myCoolFont';
+      }
+    }
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ##Code Along
+          </section>
+          <section data-markdown>
+            ###@font-face
+            1. Download your font
+            2. Place the font file in  your web site
+            3. Create a @font-face CSS rule
+            1. Give your font an identifier (e.g., “myCoolFont”)
+            2. Point the identifier to your font file(s)
+          </section>
+          <section data-markdown>
+            ###@font-face
+            You can download fonts from external sources or reference them via the internet using services like Google Web Fonts.
+          </section>
+        </section>
+
+        <!--NEW SECTION-->
+        <section data-markdown>
+          ## Questions
+        </section>
+
+        <section>
+          <section data-markdown>
+            ## Homework
+            ### Image Gallery
+          </section>
+          <section data-markdown style="font-size:80%" class="align-left">
+            ###Image Gallery
+
+            Make a new website detailing some of the topics we have covered so far with explanatory text.
+
+            - Use semantic HTML5
+            - Use pseudo-selectors
+            - Use at least 1 custom font
+            - Your website should include 2 rows of 3 images (6 total)
+            - Each image should say something about a specific topic we've covered (HTML, CSS Positioning, etc.)
+            - Each image should have an explanatory caption
+            - Each row of images should be contained in a div with padding and margin
+            - Each image should have a border, padding, and margin
+            - Your page should include a header (Page Title) and footer (more info, copyright, etc.)
+            - Use at least one absolutely or fixed positioned element
+          </section>
+        </section>
+      </section>
+    </div><!-- END SLIDES DIV -->
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    // Optional reveal.js plugins
+    dependencies: [
+    { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+    { src: 'reveal/plugin/notes/notes.js', async: true }
+    ]
+    });
+    Reveal.configure({ slideNumber: 'c / t' });
+    </script>
+  </body>
+</html>
