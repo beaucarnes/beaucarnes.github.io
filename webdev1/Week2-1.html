@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Front-End - Week 1</title>
+
+    <meta name="description" content="A front-end web development course by Grand Circus Detroit">
+    <meta name="author" content="Jeseekia Vaughn">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!--Grand Circus branded theme -->
+    <link rel="stylesheet" href="reveal/gc/gc.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="reveal/css/main.css">
+
+
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"><img src="reveal/gc/photo/gcreveallogo.png"></a>
+    </header>
+
+    <div class="reveal convex center">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <section class="slides">
+
+        <!-- DAY 3 -->
+        <section data-markdown>
+          ##Intro to Web Development Part One: HTML &amp; CSS
+          ###Week 2 Session 1
+        </section>
+
+        <section data-markdown>
+          ##Goals for tonight
+          - CSS Resets
+          - The Box Model
+        </section>
+
+        <section>
+          <section data-markdown>
+            ##Code Challenge
+          </section>
+          <section data-markdown>
+            ###Extend your "about me" site
+            Apply the following CSS properties to your site:
+            - font-family
+            - color
+            - background color
+            - child selectors
+            - 3 CSS properties that were not used in class
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown class='align-left'>
+            ##CSS RESET
+          </section>
+          <section data-markdown class='align-left'>
+            ### CSS RESET
+
+            Because each of the browsers implement CSS and HTML just a little bit differently, two sites which are styled exactly the same can end up looking just a little bit off from one another.
+
+            One way to combat this is to use a CSS Reset. This is a css file that sets all of the usual suspects to normalized values, giving you a standard place to start from.
+          </section>
+          <section data-markdown class='align-left'>
+            ### css reset
+
+            There are many css resets that can be found freely on the internet. Here are two.
+             - http://meyerweb.com/eric/tools/css/reset/
+             - https://necolas.github.io/normalize.css/
+          </section>
+          <section data-markdown class='align-left'>
+            ### using a css reset
+
+            A CSS reset is just another css file that you include in your project. The only requirement is that you include your reset file *before* your project's css file. This is because of the way css is read by the browser. Whatever comes last wins so a css reset file included after a `styles.css` will overwrite any styles that conflict between the two.
+
+            ```html
+            &lt;link rel="stylesheet" href="reset.css">
+            &lt;link rel="stylesheet" href="styles.css">
+            ```
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            ## The box model
+          </section>
+          <section data-markdown>
+            ### The box model
+
+            Every HTML element is in a box, regardless of its visible shape.
+          </section>
+          <section data-markdown>
+            ### The box model
+
+            The total size of an element is a combination of the following:
+            - Content
+            - Padding
+            - Border
+            - Margin
+          </section>
+          <section data-markdown>
+            ### The box model
+
+            ![box model](images/CSS 2.png)
+          </section>
+          <section data-markdown>
+            ### The box model
+
+            ![box model](images/catboxmodel.jpg)
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ##border
+          </section>
+          <section data-markdown>
+            ###The box model
+
+            ![box model](images/CSS 2.png)
+          </section>
+          <section data-markdown>
+            ###border
+
+            Border is the edge around the element. It has elements of thickness, style, and color.
+          </section>
+          <section data-markdown class='align-left'>
+            ###border
+
+            Border is a CSS property and is defined using CSS rules. There are a few different ways to specify a border.
+          </section>
+          <section>
+            <h3>border</h3>
+          <pre>
+            <code>
+          p { /* each property specified separately */
+            border-width: 10px; /* thickness */
+            border-style: solid;
+            border-color: blue;
+          }
+          p { /* all properties specified in one rule */
+            border: 1px dashed black;
+          }
+          p { /* Two separate styles on one element */
+            border-top: 1px dotted #FF0000;
+            border-bottom: 1px groove #FF0;
+          }
+            </code>
+          </pre>
+          </section>
+          <section data-markdown>
+              ###border styles
+
+              ![border styles](images/borderStyles.png)
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+              ## Padding
+          </section>
+          <section data-markdown>
+            ###The box model
+
+            ![box model](images/CSS 2.png)
+          </section>
+          <section data-markdown class="align-left">
+              ### padding
+
+              Padding is the space between the content within an element and the border. Padding can be specified in units of pixels `px`, Ems `em`, or percentage `%` of the containing element.
+          </section>
+          <section data-markdown class="align-left">
+              ### padding
+
+              Padding is a CSS property (just like `color` or `font-family`) and is defined using the same rules. The only difference is that there a few different ways to write them.
+          </section>
+          <section>
+            <h3>padding</h3>
+
+            <pre>
+              <code>
+            p {
+              padding: 10px;/* 10 px of padding on all sides */
+            }
+            p {
+              padding: 10px 5px; /* 10 px on top/bottom, 5px on left/right */
+            }
+            p {
+              padding-top: 5px;
+              padding-right: 10px;
+              padding-bottom: 15px;
+              padding-left: 20px;
+            }
+            p {
+              padding: 5px 10px 15px 20px; /* top, right, bottom, left */
+            }
+              </code>
+            </pre>
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+        <section data-markdown>
+            ## Margin
+        </section>
+        <section data-markdown>
+            ###The box model
+
+            ![box model](images/CSS 2.png)
+        </section>
+        <section data-markdown class="align-left">
+            ###Margin
+
+            Margins are the space outside the element that separates it from other elements. It is 'outside the fence' in terms of its relationship to the border.
+        </section>
+        <section data-markdown class="align-left">
+            ###Margin
+
+            Like padding & border is a CSS property and is defined using CSS rules. Much like padding, there a few different ways to specify it.
+        </section>
+        <section>
+            <h3>Margin</h3>
+
+        <pre>
+          <code>
+        p {
+          margin: 10px; /* 10 pixels of margin on all sides */
+        }
+        p {
+          margin: 10px 5px; /* 10 px on top/bottom, 5px on left/right */
+        }
+        p {
+          margin-top: 5px;
+          margin-right: 10px;
+          margin-bottom: 15px;
+          margin-left: 20px;
+        }
+        p {
+          margin: 5px 10px 15px 20px; /* top, right, bottom, left */
+        }
+          </code>
+        </pre>
+        </section>
+        <section data-markdown class="align-left">
+            ###Auto Margin
+
+            If margin is set to `auto` on an element that has a set width, it will take up as much space as possible. You can use this to center or justify an element left or right. This only works for horizontally centering.
+        </section>
+        <section>
+            <h3>Auto Margin</h3>
+
+        <pre>
+          <code>
+        p {
+          margin: 0 auto;
+          width: 300px;
+        }
+        p {
+          margin-right: auto;
+          margin-left: 10px;
+          width: 25%;
+        }
+          </code>
+        </pre>
+        </section>
+        </section>
+        <!--NEW SECTION-->
+        <section data-markdown>
+        ## Questions?
+        </section>
+
+        <section>
+          <section data-markdown>
+            ## Code Along
+            ### Messing with the Box Model
+          </section>
+          <section>
+            <h3>Box Model Shenanigans</h3>
+
+            <ul>
+              <li>New Project (index.html, main.css)</li>
+              <li>Create a basic HTML site</li>
+              <li>Add 3 div elements with IDs and put a paragraph tag in each.</li>
+              <li>Add some content</li>
+              <li>Apply the following CSS properties</li>
+              <li>Using the ID selectors, specify padding, border, and margin for each div</li>
+              <li>try different border styles</li>
+              <li>try setting some different widths and heights just to see how they're affected (if at all)</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section data-markdown class='align-left'>
+            ## HOMEWORK
+          </section>
+          <section data-markdown class='align-left'>
+            ### Homework 2-1
+
+            - Make a copy of the homework from week 1 session 1 (plain HTML)
+            - Add appropriate margin, border, and padding to the text, images, and lists
+            - Add a border to the image and table
+            - Create a div for all of the page content and horizontally center it.
+            - Add appropriate border and padding to the container div.
+          </section>
+        </section>
+        <section>
+          <section data-markdown class='align-left'>
+            ## BONUS
+          </section>
+          <section data-markdown class='align-left'>
+            ### Font Awesome!
+               http://fontawesome.io/
+          </section>
+        </section>
+
+
+
+      </section>
+    </div><!-- END SLIDES DIV -->
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+      Reveal.configure({ slideNumber: 'c / t' });
+    </script>
+
+  </body>
+</html>

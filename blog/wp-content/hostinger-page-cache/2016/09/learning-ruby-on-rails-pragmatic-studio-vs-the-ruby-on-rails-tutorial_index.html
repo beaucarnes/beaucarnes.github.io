@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="//gmpg.org/xfn/11">
+		<link rel="pingback" href="//carnes.cc/xmlrpc.php">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Learning Ruby on Rails: Pragmatic Studio vs. The Ruby on Rails Tutorial &#8211; Carnes.cc</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Carnes.cc &raquo; Feed" href="//carnes.cc/feed" />
+<link rel="alternate" type="application/rss+xml" title="Carnes.cc &raquo; Comments Feed" href="//carnes.cc/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Carnes.cc &raquo; Learning Ruby on Rails: Pragmatic Studio vs. The Ruby on Rails Tutorial Comments Feed" href="//carnes.cc/2016/09/learning-ruby-on-rails-pragmatic-studio-vs-the-ruby-on-rails-tutorial/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/carnes.cc\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='//fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='//carnes.cc/wp-content/themes/twentysixteen/genericons/genericons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='//carnes.cc/wp-content/themes/twentysixteen/style.css' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='//carnes.cc/wp-content/themes/twentysixteen/css/ie.css' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='//carnes.cc/wp-content/themes/twentysixteen/css/ie8.css' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='//carnes.cc/wp-content/themes/twentysixteen/css/ie7.css' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='//carnes.cc/wp-content/themes/twentysixteen/js/html5.js'></script>
+<![endif]-->
+<script type='text/javascript' src='//carnes.cc/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='//carnes.cc/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='//api.w.org/' href='//carnes.cc/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="//carnes.cc/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//carnes.cc/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Stuck? Start!' href='//carnes.cc/2016/08/stuck-start' />
+<link rel='next' title='Using templates: Is web design a solved problem?' href='//carnes.cc/2016/09/using-templates-is-web-design-a-solved-problem' />
+<meta name="generator" content="WordPress 4.8.1" />
+<link rel="canonical" href="//carnes.cc/2016/09/learning-ruby-on-rails-pragmatic-studio-vs-the-ruby-on-rails-tutorial" />
+<link rel='shortlink' href='//carnes.cc/?p=12' />
+<link rel="alternate" type="application/json+oembed" href="//carnes.cc/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcarnes.cc%2F2016%2F09%2Flearning-ruby-on-rails-pragmatic-studio-vs-the-ruby-on-rails-tutorial" />
+<link rel="alternate" type="text/xml+oembed" href="//carnes.cc/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcarnes.cc%2F2016%2F09%2Flearning-ruby-on-rails-pragmatic-studio-vs-the-ruby-on-rails-tutorial&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+			<style type="text/css" id="twentysixteen-header-css">
+		.site-branding {
+			margin: 0 auto 0 0;
+		}
+
+		.site-branding .site-title,
+		.site-description {
+			clip: rect(1px, 1px, 1px, 1px);
+			position: absolute;
+		}
+	</style>
+	</head>
+
+<body class="post-template-default single single-post postid-12 single-format-standard group-blog">
+<div id="page" class="site">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-header-main">
+				<div class="site-branding">
+					
+											<p class="site-title"><a href="//carnes.cc/" rel="home">Carnes.cc</a></p>
+											<p class="site-description">Just another WordPress site</p>
+									</div><!-- .site-branding -->
+
+							</div><!-- .site-header-main -->
+
+					</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+<article id="post-12" class="post-12 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorised">
+	<header class="entry-header">
+		<h1 class="entry-title">Learning Ruby on Rails: Pragmatic Studio vs. The Ruby on Rails Tutorial</h1>	</header><!-- .entry-header -->
+
+	
+	
+	<div class="post-thumbnail">
+		<img width="740" height="417" src="//carnes.cc/wp-content/uploads/2016/09/psvsrr.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="//carnes.cc/wp-content/uploads/2016/09/psvsrr.jpg 740w, //carnes.cc/wp-content/uploads/2016/09/psvsrr-300x169.jpg 300w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px" />	</div><!-- .post-thumbnail -->
+
+	
+	<div class="entry-content">
+		<div style="clear: both; text-align: center;"><a href="//carnes.cc/wp-content/uploads/2016/09/psvsrr.jpg" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="180" src="//carnes.cc/wp-content/uploads/2016/09/psvsrr-300x169.jpg" width="320" /></a></div>
+<p>I first started learning Ruby on Rails back in January based on the suggestion of a friend. We decided to complete the Pragmatic Studio Rails course together. I have now successfully finished both the <a href="//pragmaticstudio.com/courses/rails" target="_blank">Pragmatic Studio Ruby on Rails: Level 1</a> course and <a href="//www.railstutorial.org/" target="_blank">Michael Hartl&#8217;s Ruby on Rails Tutorial</a>. I am going to do a brief review of the pros and cons of each course. I found both the courses to be very well-done and professional and both would be good for a beginner learning Ruby on Rails However, that does not mean I would recommend people do both courses. At the end I will offer a suggestion for people trying to decide the best route to take to learn Ruby on Rails.</p>
+<p><b><a href="//pragmaticstudio.com/courses/rails" target="_blank">Pragmatic Studio Ruby on Rails: Level 1</a></b><br />This course costs $149. After some discounts I paid&nbsp;$126.75. Before completing this course, I also went through their Ruby course to learn the fundamentals of Ruby. The course is broken up into 26 different sections and each section has a video and exercises. Text within the exercises section goes over pretty much everything covered in the videos so it is easy to find specific information.</p>
+<p>The videos are professional quality and they all feature a husband/wife team. The interaction between the two hosts make the videos more interesting. They break everything down so it is very easy to follow. In the exercise section that goes along with each video, they guide you through creating a project that is similar, yet still different, to the project that they create in the videos. Since the exercise project is different than the one they create in the videos, it forces you to think through things a little more instead of just copying and pasting. This helped me learn the material better.</p>
+<p>The project for this course was to make a move review site.&nbsp;<a href="//flixbc.herokuapp.com/" target="_blank">Check out the &nbsp;website</a>&nbsp;I made with this course.</p>
+<p><b><a href="//www.railstutorial.org/" target="_blank">Michael Hartl&#8217;s Ruby on Rails Tutorial</a></b><br />I completed this course many months later, partly to get a refresher on Ruby on Rails. One of the best parts about this course is that it is free. This course is basically an online textbook and tutorial. The free version does not contain any videos. This course covered a lot of the same concepts as the Ruby on Rails course. However, &nbsp;compared to the Pragmatic Studio course, it seemed a little more advanced and I got the feeling that the work-flow was more aligned with what it would be like in an actual job environment. I did not complete the Pragmatic Studio Level 2 course but this tutorial covered many topics from the Level 2 course such as users, authentication, and admin privileges.</p>
+<p>As far as I can tell, the Ruby on Rails Tutorial is the most popular way to learn Ruby on Rails. Also, Micheal Hartl is constantly updating it. I e-mailed him about a very minor error and he fixed it within a day. While I did not run into any major errors in the Pragmatic Studio course, I feel more confident about the accuracy in Hartl&#8217;s course just because of it&#8217;s popularity combined with very quick updates to any mistakes that are found.</p>
+<p>One thing that could be a pro or con is that the current version of the Ruby on Rails tutorial focuses on creating a project through Cloud 9, a cloud-based IDE, while Pragmatic Studio suggests to use a local installation. So Pragmatic Studio gives a little more detail on how to install everything locally.</p>
+<p>Both courses give instruction on using git, Heroku, and Amazon AWS.</p>
+<p>The project for this course was to create a site similar to Twitter.&nbsp;<a href="//arcane-oasis-58305.herokuapp.com/" target="_blank">Check out the site </a>I made with this course.</p>
+<p><b>What I would do differently if I had to do it again</b><br />Though they are both great courses, if I had to do everything again I would not do the Pragmatic Studio Course. In addition to going through Micheal Hartl&#8217;s free course, I would join his Learn Enough society for&nbsp;$29.00 /month that includes videos to go along with the Ruby on Rails Tutorial. This subscription also includes other material as well. I did not do this so I cannot speak to how these videos compare to the Pragmatic Studio course but based on how well done the free tutorial is, I would assume they would be very good videos.</p>
+<p>One last thing to consider is that the Pragmatic Studio course may be a little easier for people with little programming experience. While both courses give detailed step-by-step instructions, the Pragmatic Studio course breaks down some concepts a little better.</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='//0.gravatar.com/avatar/?s=49&#038;d=mm&#038;r=g' srcset='//1.gravatar.com/avatar/?s=98&amp;d=mm&amp;r=g 2x' class='avatar avatar-49 photo avatar-default' height='49' width='49' /><span class="screen-reader-text">Author </span> <a class="url fn n" href="//carnes.cc/author/beau-carnes">Beau Carnes</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="//carnes.cc/2016/09/learning-ruby-on-rails-pragmatic-studio-vs-the-ruby-on-rails-tutorial" rel="bookmark"><time class="entry-date published" datetime="2016-09-18T00:36:00+00:00">18th September 2016</time><time class="updated" datetime="2017-06-30T11:03:52+00:00">30th June 2017</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="//carnes.cc/category/uncategorised" rel="category tag">Uncategorised</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2016/09/learning-ruby-on-rails-pragmatic-studio-vs-the-ruby-on-rails-tutorial#respond" style="display:none;">Cancel reply</a></small></h2>			<form action="//carnes.cc/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='12' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="//carnes.cc/2016/08/stuck-start" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Stuck? Start!</span></a></div><div class="nav-next"><a href="//carnes.cc/2016/09/using-templates-is-web-design-a-solved-problem" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">Using templates: Is web design a solved problem?</span></a></div></div>
+	</nav>
+	</main><!-- .site-main -->
+
+	
+</div><!-- .content-area -->
+
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="search-2" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="//carnes.cc/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="//carnes.cc/2017/06/the-ceo-of-my-hosting-provider-hostmetro-took-personal-revenge-on-me">The CEO of my hosting provider (HostMetro) took personal revenge on me</a>
+						</li>
+					<li>
+				<a href="//carnes.cc/2016/10/wartime-lifestyle-earning-to-give">Wartime Lifestyle &#038; Earning to Give</a>
+						</li>
+					<li>
+				<a href="//carnes.cc/2016/10/angular-2-vs-react-which-one-should-a-new-developer-learn">Angular 2 vs React: Which one should a new developer learn?</a>
+						</li>
+					<li>
+				<a href="//carnes.cc/2016/10/how-to-get-a-developer-job-in-a-small-market-part-1">How to get a developer job in a small market, part 1</a>
+						</li>
+					<li>
+				<a href="//carnes.cc/2016/10/history-and-future-of-programming">History and Future of Programming</a>
+						</li>
+				</ul>
+		</section>		<section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='//www.blogger.com/profile/12603412678089134501' rel='external nofollow' class='url'>Unknown</a></span> on <a href="//carnes.cc/2016/06/how-i-completed-my-entire-wgu-software-development-degree-in-6-months-76-cus#comment-4">How I completed my entire WGU Software Development degree in 6 months (76 CUs)</a></li><li class="recentcomments"><span class="comment-author-link"><a href='//www.blogger.com/profile/15194975135222652812' rel='external nofollow' class='url'>Rob</a></span> on <a href="//carnes.cc/2016/06/how-i-completed-my-entire-wgu-software-development-degree-in-6-months-76-cus#comment-5">How I completed my entire WGU Software Development degree in 6 months (76 CUs)</a></li><li class="recentcomments"><span class="comment-author-link"><a href='//www.blogger.com/profile/16106950717821956360' rel='external nofollow' class='url'>Beau</a></span> on <a href="//carnes.cc/2016/06/how-i-completed-my-entire-wgu-software-development-degree-in-6-months-76-cus#comment-6">How I completed my entire WGU Software Development degree in 6 months (76 CUs)</a></li><li class="recentcomments"><span class="comment-author-link"><a href='//www.blogger.com/profile/15629369362059165035' rel='external nofollow' class='url'>Dio</a></span> on <a href="//carnes.cc/2016/06/how-i-completed-my-entire-wgu-software-development-degree-in-6-months-76-cus#comment-7">How I completed my entire WGU Software Development degree in 6 months (76 CUs)</a></li><li class="recentcomments"><span class="comment-author-link"><a href='//www.blogger.com/profile/16106950717821956360' rel='external nofollow' class='url'>Beau</a></span> on <a href="//carnes.cc/2016/06/how-i-completed-my-entire-wgu-software-development-degree-in-6-months-76-cus#comment-8">How I completed my entire WGU Software Development degree in 6 months (76 CUs)</a></li></ul></section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archives</h2>		<ul>
+			<li><a href='//carnes.cc/2017/06'>June 2017</a></li>
+	<li><a href='//carnes.cc/2016/10'>October 2016</a></li>
+	<li><a href='//carnes.cc/2016/09'>September 2016</a></li>
+	<li><a href='//carnes.cc/2016/08'>August 2016</a></li>
+	<li><a href='//carnes.cc/2016/07'>July 2016</a></li>
+	<li><a href='//carnes.cc/2016/06'>June 2016</a></li>
+		</ul>
+		</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+	<li class="cat-item cat-item-3"><a href="//carnes.cc/category/google-app-scripts" >Google App Scripts</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="//carnes.cc/category/javascript" >JavaScript</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="//carnes.cc/category/marriage" >marriage</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="//carnes.cc/category/uncategorised" >Uncategorised</a>
+</li>
+		</ul>
+</section><section id="meta-2" class="widget widget_meta"><h2 class="widget-title">Meta</h2>			<ul>
+						<li><a href="//carnes.cc/wp-login.php">Log in</a></li>
+			<li><a href="//carnes.cc/feed">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="//carnes.cc/comments/feed">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="//www.hostinger.com/" title="Cheap web hosting.">Cheap web hosting</a></li><li><a href="//www.000webhost.com/" title="Free web hosting.">Free web hosting</a></li>			</ul>
+			</section>	</aside><!-- .sidebar .widget-area -->
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			
+			
+			<div class="site-info">
+								<span class="site-title"><a href="//carnes.cc/" rel="home">Carnes.cc</a></span>
+				<a href="//www.hostinger.com/">Premium WordPress hosting</a>
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<script type='text/javascript' src='//carnes.cc/wp-content/themes/twentysixteen/js/skip-link-focus-fix.js'></script>
+<script type='text/javascript' src='//carnes.cc/wp-includes/js/comment-reply.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//carnes.cc/wp-content/themes/twentysixteen/js/functions.js'></script>
+<script type='text/javascript' src='//carnes.cc/wp-includes/js/wp-embed.min.js'></script>
+
+<!--Generated by Hostinger Page Cache-->
+</body>
+</html>

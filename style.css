@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+
+body {
+  width: 100%;
+  padding-top: 10px;
+  font-family: 'Crimson Text', serif;
+  font-size: 2em;
+  line-height: 1.2em;
+  background-color: #FFF9F0;
+  color: #3E3E3E;
+  background-image: url('beau.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right top; 
+}
+
+.container {
+  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav {
+  height: 20px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+h1 {
+  font-weight: 700;
+  line-height: .65em;
+  -webkit-text-stroke: 1px #FFF9F0;
+  letter-spacing: -3px;
+}
+
+a {
+  color: DeepSkyBlue;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: LightCyan;
+}
+
+p {
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding-bottom: 30px;
+  line-height: 1em;
+}
+
+li::before {
+  font-size: .3em;
+  vertical-align: middle;
+  content: "⚫";
+  display: inline-block; 
+  width: 2em;
+  margin-left: -1em}
+
+.hidden-link {
+  color: #3E3E3E;
+}
+
+small {
+  font-size: .5em
+}
+
+div[style*="z-index:9999999"] {
+    display: none;
+}

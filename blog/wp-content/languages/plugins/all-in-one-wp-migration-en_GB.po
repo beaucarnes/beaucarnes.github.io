@@ -1,0 +1,596 @@
+# Translation of Plugins - All-in-One WP Migration - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - All-in-One WP Migration - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-06-05 22:17:47+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - All-in-One WP Migration - Stable (latest release)\n"
+
+#: functions.php:943
+msgid "Unable to authenticate the secret key."
+msgstr "Unable to authenticate the secret key."
+
+#: lib/model/import/class-ai1wm-import-database.php:74
+#: lib/model/import/class-ai1wm-import-database.php:642
+msgid "Restoring database...<br />%d%% complete"
+msgstr "Restoring database...<br />%d%% complete"
+
+#: lib/model/export/class-ai1wm-export-database.php:54
+#: lib/model/export/class-ai1wm-export-database.php:150
+msgid "Exporting database...<br />%d%% complete"
+msgstr "Exporting database...<br />%d%% complete"
+
+#: lib/model/export/class-ai1wm-export-compatibility.php:31
+#: lib/model/import/class-ai1wm-import-compatibility.php:31
+msgid "Checking extensions compatibility..."
+msgstr "Checking extensions compatibility..."
+
+#: lib/model/import/class-ai1wm-import-database.php:622
+msgid "Done restoring database..."
+msgstr "Done restoring database..."
+
+#: lib/controller/class-ai1wm-main-controller.php:654
+msgid "Monthly"
+msgstr "Monthly"
+
+#: lib/controller/class-ai1wm-main-controller.php:650
+msgid "Weekly"
+msgstr "Weekly"
+
+#: functions.php:817
+msgid "Unable to read file: %s"
+msgstr "Unable to read file: %s"
+
+#: functions.php:799
+msgid "Out of disk space."
+msgstr "Out of disk space."
+
+#: lib/view/export/advanced-settings.php:47
+msgid "Do <strong>not</strong> export must-use plugins (files)"
+msgstr "Do <strong>not</strong> export must-use plugins (files)"
+
+#: lib/model/import/class-ai1wm-import-mu-plugins.php:43
+msgid "Done activating mu-plugins..."
+msgstr "Done activating mu-plugins..."
+
+#: lib/model/import/class-ai1wm-import-mu-plugins.php:31
+msgid "Activating mu-plugins..."
+msgstr "Activating mu-plugins..."
+
+#: lib/view/import/index.php:38
+msgid "Use the box below to upload a wpress file."
+msgstr "Use the box below to upload a wpress file."
+
+#: lib/view/export/button-box.php:1 lib/view/import/button-box.php:1
+msgid "Box"
+msgstr "Box"
+
+#: lib/view/export/advanced-settings.php:38
+msgid "Do <strong>not</strong> export inactive themes (files)"
+msgstr "Do <strong>not</strong> export inactive themes (files)"
+
+#: lib/view/backups/index.php:57
+msgid "The file is too large for your hosting plan."
+msgstr "The file is too large for your hosting plan."
+
+#: lib/view/export/advanced-settings.php:85
+msgid "Do <strong>not</strong> replace email domain (sql)"
+msgstr "Do <strong>not</strong> replace email domain (sql)"
+
+#: lib/view/export/advanced-settings.php:63
+msgid "Do <strong>not</strong> export inactive plugins (files)"
+msgstr "Do <strong>not</strong> export inactive plugins (files)"
+
+#: lib/model/import/class-ai1wm-import-upload.php:100
+msgid "Unrecognized error %s during upload."
+msgstr "Unrecognised error %s during upload."
+
+#: lib/model/import/class-ai1wm-import-upload.php:94
+msgid "A PHP extension stopped the file upload."
+msgstr "A PHP extension stopped the file upload."
+
+#: lib/model/import/class-ai1wm-import-upload.php:89
+msgid "Failed to write file to disk."
+msgstr "Failed to write file to disk."
+
+#: lib/model/import/class-ai1wm-import-upload.php:84
+msgid "Missing a temporary folder."
+msgstr "Missing a temporary folder."
+
+#: lib/model/import/class-ai1wm-import-upload.php:79
+msgid "The file is too large, retrying with smaller size."
+msgstr "The file is too large, retrying with smaller size."
+
+#: lib/model/import/class-ai1wm-import-upload.php:66
+msgid "Unable to upload the file because %s"
+msgstr "Unable to upload the file because %s"
+
+#: lib/model/import/class-ai1wm-import-upload.php:45
+msgid "Missing tmp_name in upload file."
+msgstr "Missing tmp_name in upload file."
+
+#: lib/model/import/class-ai1wm-import-upload.php:38
+msgid "Missing error key in upload file."
+msgstr "Missing error key in upload file."
+
+#: lib/model/import/class-ai1wm-import-upload.php:31
+msgid "Missing upload file."
+msgstr "Missing upload file."
+
+#: functions.php:796
+msgid "Unable to write to: %s"
+msgstr "Unable to write to: %s"
+
+#: functions.php:777
+msgid "Unable to open %s with mode %s"
+msgstr "Unable to open %s with mode %s"
+
+#: lib/view/export/advanced-settings.php:40
+#: lib/view/export/advanced-settings.php:49
+#: lib/view/export/advanced-settings.php:65
+#: lib/view/export/advanced-settings.php:72
+#: lib/view/export/advanced-settings.php:87
+msgid "new"
+msgstr "new"
+
+#: lib/view/export/advanced-settings.php:70
+msgid "Do <strong>not</strong> export cache (files)"
+msgstr "Do <strong>not</strong> export cache (files)"
+
+#: lib/model/export/class-ai1wm-export-compatibility.php:55
+msgid "All-in-One WP Migration was unable to backup %s. %s"
+msgstr "All-in-One WP Migration was unable to back up %s. %s"
+
+#: lib/model/export/class-ai1wm-export-compatibility.php:52
+msgid "Unable to backup your site"
+msgstr "Unable to back up your site"
+
+#: lib/view/export/button-onedrive.php:1 lib/view/import/button-onedrive.php:1
+msgid "OneDrive"
+msgstr "OneDrive"
+
+#: lib/model/import/class-ai1wm-import-blogs.php:124
+msgid "Done preparing blogs..."
+msgstr "Done preparing blogs..."
+
+#: lib/model/import/class-ai1wm-import-blogs.php:113
+msgid "Unable to import <strong>WordPress Network</strong> into WordPress <strong>Single</strong> site."
+msgstr "Unable to import <strong>WordPress Network</strong> into WordPress <strong>Single</strong> site."
+
+#: lib/model/import/class-ai1wm-import-blogs.php:108
+msgid "At least <strong>one WordPress</strong> site should be presented in the archive."
+msgstr "At least <strong>one WordPress</strong> site should be presented in the archive."
+
+#: lib/model/import/class-ai1wm-import-blogs.php:103
+msgid "The archive should contain <strong>Single WordPress</strong> site! Please revisit your export settings."
+msgstr "The archive should contain <strong>Single WordPress</strong> site! Please revisit your export settings."
+
+#: lib/model/import/class-ai1wm-import-blogs.php:31
+msgid "Preparing blogs..."
+msgstr "Preparing blogs..."
+
+#: lib/model/export/class-ai1wm-export-resolve.php:37
+#: lib/model/import/class-ai1wm-import-resolve.php:37
+msgid "Done resolving URL address..."
+msgstr "Done resolving URL address..."
+
+#: lib/model/export/class-ai1wm-export-resolve.php:31
+#: lib/model/import/class-ai1wm-import-resolve.php:31
+msgid "Resolving URL address..."
+msgstr "Resolving URL address..."
+
+#: lib/model/export/class-ai1wm-export-config.php:113
+msgid "Done adding configuration to archive."
+msgstr "Done adding configuration to archive."
+
+#: lib/model/export/class-ai1wm-export-config.php:32
+msgid "Adding configuration to archive..."
+msgstr "Adding configuration to archive..."
+
+#: lib/model/class-ai1wm-report.php:46
+msgid "Please accept report term conditions."
+msgstr "Please accept report term conditions."
+
+#: lib/model/class-ai1wm-feedback.php:63 lib/model/class-ai1wm-report.php:59
+msgid "Something went wrong: %s"
+msgstr "Something went wrong: %s"
+
+#: lib/model/class-ai1wm-feedback.php:49
+msgid "Please accept feedback term conditions."
+msgstr "Please accept feedback term conditions."
+
+#: lib/model/class-ai1wm-feedback.php:47 lib/model/class-ai1wm-report.php:44
+msgid "Please enter comments in the text area."
+msgstr "Please enter comments in the text area."
+
+#: lib/model/class-ai1wm-feedback.php:45 lib/model/class-ai1wm-report.php:42
+msgid "Your email is not valid."
+msgstr "Your email is not valid."
+
+#: lib/model/class-ai1wm-feedback.php:43
+msgid "Feedback type is invalid."
+msgstr "Feedback type is invalid."
+
+#: lib/view/updater/modal.php:25
+msgid "There is an update available. To update, you must enter your"
+msgstr "There is an update available. To update, you must enter your"
+
+#: lib/view/updater/modal.php:18
+msgid "Discard"
+msgstr "Discard"
+
+#: lib/view/updater/modal.php:16
+msgid "Save"
+msgstr "Save"
+
+#: lib/view/updater/modal.php:12
+msgid "here"
+msgstr "here"
+
+#: lib/view/updater/modal.php:11
+msgid "Don't have a Purchase ID? You can find your Purchase ID"
+msgstr "Don't have a Purchase ID? You can find your Purchase ID"
+
+#: lib/view/updater/modal.php:7 lib/view/updater/modal.php:26
+msgid "Purchase ID"
+msgstr "Purchase ID"
+
+#: lib/view/updater/modal.php:4
+msgid "To update your plugin/extension to the latest version, please fill your Purchase ID below."
+msgstr "To update your plugin/extension to the latest version, please fill your Purchase ID below."
+
+#: lib/view/updater/modal.php:3
+msgid "Enter your Purchase ID"
+msgstr "Enter your Purchase ID"
+
+#: lib/view/updater/check.php:1
+msgid "Check for updates"
+msgstr "Check for updates"
+
+#: lib/view/main/get-support.php:1
+msgid "Get Support"
+msgstr "Get Support"
+
+#. Author of the plugin/theme
+msgid "ServMask"
+msgstr "ServMask"
+
+#. Description of the plugin/theme
+msgid "Migration tool for all your blog data. Import or Export your blog content with a single click."
+msgstr "Migration tool for all your blog data. Import or Export your blog content with a single click."
+
+#. #-#-#-#-#  all-in-one-wp-migration-code.pot (All-in-One WP Migration 6.50) 
+#. #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  all-in-one-wp-migration-code.pot (All-in-One WP Migration 6.50) 
+#. #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://servmask.com/"
+msgstr "https://servmask.com/"
+
+#. Plugin Name of the plugin/theme
+msgid "All-in-One WP Migration"
+msgstr "All-in-One WP Migration"
+
+#: lib/view/import/index.php:31
+msgid "Import Site"
+msgstr "Import Site"
+
+#: lib/view/import/import-buttons.php:45
+msgid "Unlimited"
+msgstr "Unlimited"
+
+#: lib/view/import/import-buttons.php:41
+msgid "Get unlimited"
+msgstr "Get unlimited"
+
+#: lib/view/import/import-buttons.php:35
+msgid "Maximum upload file size:"
+msgstr "Maximum upload file size:"
+
+#: lib/view/import/import-buttons.php:14
+msgid "Import From"
+msgstr "Import From"
+
+#: lib/view/import/import-buttons.php:10
+msgid "Drag & Drop to upload"
+msgstr "Drag & Drop to upload"
+
+#: lib/view/import/button-url.php:1
+msgid "URL"
+msgstr "URL"
+
+#: lib/view/export/index.php:31
+msgid "Export Site"
+msgstr "Export Site"
+
+#: lib/view/export/help-section.php:21
+msgid "Once the file is successfully downloaded on your computer, you can import it to any of your WordPress sites."
+msgstr "Once the file is successfully downloaded on your computer, you can import it to any of your WordPress sites."
+
+#: lib/view/export/help-section.php:17
+msgid "Press \"Export\" button and the site archive file will pop up in your browser."
+msgstr "Press \"Export\" button and the site archive file will pop up in your browser."
+
+#: lib/view/export/help-section.php:13
+msgid "In the advanced settings section you can configure more precisely the way of exporting."
+msgstr "In the advanced settings section you can configure more precisely the way of exporting."
+
+#: lib/view/export/help-section.php:7
+msgid "Quick hints"
+msgstr "Quick hints"
+
+#: lib/view/export/help-section.php:3
+msgid "You can then use the import functionality provided by this plugin to import the zipped file onto any other WordPress sites that you have administrator access to."
+msgstr "You can then use the import functionality provided by this plugin to import the zipped file onto any other WordPress sites that you have administrator access to."
+
+#: lib/view/export/help-section.php:2
+msgid "This screen allows you to export database, media files, themes and plugins as one zipped file."
+msgstr "This screen allows you to export database, media files, themes and plugins as one zipped file."
+
+#: lib/view/export/find-replace.php:21
+msgid "Add"
+msgstr "Add"
+
+#: lib/view/export/find-replace.php:9
+msgid "in the database"
+msgstr "in the database"
+
+#: lib/view/export/find-replace.php:8
+msgid "<another-text>"
+msgstr "<another-text>"
+
+#: lib/view/export/find-replace.php:7 lib/view/export/find-replace.php:15
+msgid "Replace with"
+msgstr "Replace with"
+
+#: lib/view/export/find-replace.php:6
+msgid "<text>"
+msgstr "<text>"
+
+#: lib/view/export/find-replace.php:5 lib/view/export/find-replace.php:14
+msgid "Find"
+msgstr "Find"
+
+#: lib/view/export/export-buttons.php:5
+msgid "Export To"
+msgstr "Export To"
+
+#: lib/view/export/button-s3.php:1 lib/view/import/button-s3.php:1
+msgid "Amazon S3"
+msgstr "Amazon S3"
+
+#: lib/view/export/button-gdrive.php:1 lib/view/import/button-gdrive.php:1
+msgid "Google Drive"
+msgstr "Google Drive"
+
+#: lib/view/export/button-ftp.php:1 lib/view/import/button-ftp.php:1
+msgid "FTP"
+msgstr "FTP"
+
+#: lib/view/export/button-file.php:1 lib/view/import/button-file.php:2
+msgid "File"
+msgstr "File"
+
+#: lib/view/export/button-dropbox.php:1 lib/view/import/button-dropbox.php:1
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: lib/view/export/advanced-settings.php:79
+msgid "Do <strong>not</strong> export database (sql)"
+msgstr "Do <strong>not</strong> export database (sql)"
+
+#: lib/view/export/advanced-settings.php:55
+msgid "Do <strong>not</strong> export plugins (files)"
+msgstr "Do <strong>not</strong> export plugins (files)"
+
+#: lib/view/export/advanced-settings.php:30
+msgid "Do <strong>not</strong> export themes (files)"
+msgstr "Do <strong>not</strong> export themes (files)"
+
+#: lib/view/export/advanced-settings.php:24
+msgid "Do <strong>not</strong> export media library (files)"
+msgstr "Do <strong>not</strong> export media library (files)"
+
+#: lib/view/export/advanced-settings.php:18
+msgid "Do <strong>not</strong> export post revisions"
+msgstr "Do <strong>not</strong> export post revisions"
+
+#: lib/view/export/advanced-settings.php:12
+msgid "Do <strong>not</strong> export spam comments"
+msgstr "Do <strong>not</strong> export spam comments"
+
+#: lib/view/export/advanced-settings.php:6
+msgid "(click to expand)"
+msgstr "(click to expand)"
+
+#: lib/view/export/advanced-settings.php:5
+msgid "Advanced options"
+msgstr "Advanced options"
+
+#: lib/view/common/share-buttons.php:37
+msgid "Tweet"
+msgstr "Tweet"
+
+#: lib/view/common/report-problem.php:15
+msgid "I agree to send my email address, comments and error logs to a ServMask server."
+msgstr "I agree to send my email address, comments and error logs to a ServMask server."
+
+#: lib/view/common/report-problem.php:10
+msgid "Please describe your problem here.."
+msgstr "Please describe your problem here.."
+
+#: lib/view/common/report-problem.php:3
+msgid "Report issue"
+msgstr "Report issue"
+
+#: lib/view/common/leave-feedback.php:45 lib/view/common/report-problem.php:24
+msgid "Cancel"
+msgstr "Cancel"
+
+#: lib/view/common/leave-feedback.php:43 lib/view/common/report-problem.php:22
+msgid "Send"
+msgstr "Send"
+
+#: lib/view/common/leave-feedback.php:36
+msgid "I agree that by clicking the send button below my email address and comments will be send to a ServMask server."
+msgstr "I agree that by clicking the send button below my email address and comments will be sent to a ServMask server."
+
+#: lib/view/common/leave-feedback.php:31
+msgid "Leave plugin developers any feedback here.."
+msgstr "Leave plugin developers any feedback here.."
+
+#: lib/view/common/leave-feedback.php:28 lib/view/common/report-problem.php:7
+msgid "Enter your email address.."
+msgstr "Enter your email address.."
+
+#: lib/view/common/leave-feedback.php:21
+msgid "I need help with this plugin"
+msgstr "I need help with this plugin"
+
+#: lib/view/common/leave-feedback.php:14
+msgid "I have ideas to improve this plugin"
+msgstr "I have ideas to improve this plugin"
+
+#: lib/view/common/leave-feedback.php:7
+msgid "I would like to review this plugin"
+msgstr "I would like to review this plugin"
+
+#: lib/view/backups/index.php:128 lib/view/export/index.php:60
+#: lib/view/import/index.php:57
+msgid "Leave Feedback"
+msgstr "Leave Feedback"
+
+#: lib/view/backups/index.php:91
+msgid "Create backup"
+msgstr "Create backup"
+
+#: lib/view/backups/index.php:87
+msgid "There are no backups available at this time, why not create a new one?"
+msgstr "There are no backups available at this time, why not create a new one?"
+
+#: lib/view/backups/index.php:77
+msgid "Delete"
+msgstr "Delete"
+
+#: lib/view/backups/index.php:73
+msgid "Restore"
+msgstr "Restore"
+
+#: lib/view/backups/index.php:69
+msgid "Download"
+msgstr "Download"
+
+#: lib/view/backups/index.php:61
+msgid "ago"
+msgstr "ago"
+
+#: lib/view/backups/index.php:44
+msgid "Size"
+msgstr "Size"
+
+#: lib/view/backups/index.php:43
+msgid "Date"
+msgstr "Date"
+
+#: lib/view/backups/index.php:42
+msgid "Name"
+msgstr "Name"
+
+#: lib/vendor/servmask/archiver/class-ai1wm-extractor.php:427
+msgid "Unable to get current pointer position of %s"
+msgstr "Unable to get current pointer position of %s"
+
+#: lib/vendor/servmask/archiver/class-ai1wm-extractor.php:293
+msgid "Unable to seek to offset %d on %s"
+msgstr "Unable to seek to offset %d on %s"
+
+#: lib/vendor/servmask/archiver/class-ai1wm-extractor.php:136
+#: lib/vendor/servmask/archiver/class-ai1wm-extractor.php:208
+msgid "%s doesn't exist"
+msgstr "%s doesn't exist"
+
+#: lib/model/import/class-ai1wm-import-done.php:126
+msgid "Your data has been imported successfully!"
+msgstr "Your data has been imported successfully!"
+
+#: lib/model/import/class-ai1wm-import-content.php:80
+#: lib/model/import/class-ai1wm-import-content.php:164
+msgid "Restoring %d files...<br />%d%% complete"
+msgstr "Restoring %d files...<br />%d%% complete"
+
+#: lib/model/import/class-ai1wm-import-validate.php:73
+msgid "Unable to get the file size of <strong>%s</strong>"
+msgstr "Unable to get the file size of <strong>%s</strong>"
+
+#: lib/model/import/class-ai1wm-import-validate.php:121
+msgid "Invalid archive file. It should contain <strong>package.json</strong> file."
+msgstr "Invalid archive file. It should contain <strong>package.json</strong> file."
+
+#: lib/model/import/class-ai1wm-import-validate.php:45
+msgid "Unpacking archive..."
+msgstr "Unpacking archive..."
+
+#: lib/model/export/class-ai1wm-export-download.php:31
+msgid "Renaming exported file..."
+msgstr "Renaming exported file..."
+
+#: lib/model/export/class-ai1wm-export-database.php:130
+msgid "Done exporting database..."
+msgstr "Done exporting database..."
+
+#: lib/model/export/class-ai1wm-export-content.php:77
+#: lib/model/export/class-ai1wm-export-content.php:104
+msgid "Archiving %d files...<br />%d%% complete"
+msgstr "Archiving %d files...<br />%d%% complete"
+
+#: lib/model/export/class-ai1wm-export-enumerate.php:137
+#: lib/model/import/class-ai1wm-import-enumerate.php:46
+msgid "Done retrieving a list of all WordPress files."
+msgstr "Done retrieving a list of all WordPress files."
+
+#: lib/model/export/class-ai1wm-export-enumerate.php:31
+#: lib/model/import/class-ai1wm-import-enumerate.php:31
+msgid "Retrieving a list of all WordPress files..."
+msgstr "Retrieving a list of all WordPress files..."
+
+#: lib/model/export/class-ai1wm-export-archive.php:38
+msgid "Done creating an empty archive."
+msgstr "Done creating an empty archive."
+
+#: lib/model/export/class-ai1wm-export-archive.php:31
+msgid "Creating an empty archive..."
+msgstr "Creating an empty archive..."
+
+#: lib/model/class-ai1wm-backups.php:76
+msgid "Unable to delete <strong>\"%s\"</strong> file."
+msgstr "Unable to delete <strong>\"%s\"</strong> file."
+
+#: lib/model/class-ai1wm-backups.php:72
+msgid "File name is not specified."
+msgstr "File name is not specified."
+
+#: lib/controller/class-ai1wm-main-controller.php:348
+#: lib/controller/class-ai1wm-main-controller.php:349
+#: lib/view/backups/index.php:31
+msgid "Backups"
+msgstr "Backups"
+
+#: lib/controller/class-ai1wm-main-controller.php:338
+#: lib/controller/class-ai1wm-main-controller.php:339
+msgid "Import"
+msgstr "Import"
+
+#: lib/controller/class-ai1wm-main-controller.php:328
+#: lib/controller/class-ai1wm-main-controller.php:329
+msgid "Export"
+msgstr "Export"
+
+#: lib/view/main/multisite-notice.php:12
+msgid "Get multisite"
+msgstr "Get multisite"

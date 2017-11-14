@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Introduction to Web Development, part 1</title>
+
+    <meta name="description" content="A front-end web development course by Grand Circus Detroit">
+    <meta name="author" content="Jeseekia Vaughn">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!--Grand Circus branded theme -->
+    <link rel="stylesheet" href="reveal/gc/gc.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="reveal/css/main.css">
+
+
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"><img src="reveal/gc/photo/gcreveallogo.png"></a>
+    </header>
+
+    <div class="reveal convex center">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <section class="slides">
+
+        <!-- DAY 1 -->
+        <section data-markdown>
+          ##Intro to Web Development Part One: HTML &amp; CSS
+          ###Week 1 Session 1
+        </section>
+        <section data-markdown>
+          ##Logistics
+          ####Start - End
+          November 2 - 21
+
+          ####Days Held
+          Tuesdays and Thursdays 6-8pm
+        </section>
+
+        <section data-markdown>
+          ##Goals for tonight
+          - Introductions
+          - Course Expectations
+          - The website as communication
+          - Your development toolchain
+          - Introduction to HTML
+        </section>
+
+        <section>
+          <section>
+            <h2>Introduction</h2>
+
+            <h3>Beau Carnes</h3>
+            <p>beaucarnes@gmail.com | @carnesbeau</p>
+          </section>
+          <section data-markdown style="font-size: 90%">
+            ###Beau Carnes
+            **_Work_**
+            - Software Developer @ CerteDrive in Grand Rapids
+            - Former high school teacher
+
+            **_Education_**
+            - Software Development (Western Governors University)
+            - Special Education (Western Governors University)
+            - Video Production (Ferris State University)
+
+          </section>
+          <section >
+            <h3>Family!</h3>
+            <img src="images/family.png" >
+          </section>
+          <section data-markdown style="font-size: 90%">
+            ###More about me
+            **_Video Courses_**
+            - [freeCodeCamp](https://medium.freecodecamp.org/my-giant-javascript-basics-course-is-now-live-on-youtube-and-its-100-free-9020a21bbc27)
+            - [Manning Publications](https://www.manning.com/livevideo/algorithms-in-motion)
+
+            **_Manning Discount Code_**
+
+            You can get 50% off of my 'Algorithms in Motion' course by using discount code 'circuscarnes'!
+
+          </section>
+          <section data-markdown>
+            ### Introductions (now you)
+            -  Who are you?
+            -  Where are you from?
+            -  What's your favorite book, movie, game or TV show?
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            ##Course Expectations
+            ####What we expect from you:
+            - Be Present
+            - Ask Questions
+            - Support Each Other
+            - Have Fun
+          </section>
+          <section data-markdown>
+            ##Course Expectations
+            ####Our goals for you:
+            - Develop thorough, hands-on knowledge of building websites through HTML and CSS.
+
+            - Understand web hosting, the mechanics of web servers, and “Internet 101”.
+          </section>
+          <section data-markdown>
+            ##Course Expectations
+            ####Keys to success:
+            1. Ask good questions
+            1. Learn how to find the answers
+            1. Practice!
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            ##The website as communication
+          </section>
+          <section data-markdown>
+            Every website on the internet uses HTML & CSS.
+
+            ![HTML everywhere](images/htmlEverywhere.jpg)
+          </section>
+          <section data-markdown>
+            ...most of them use JavaScript as well, in one form or another.
+          </section>
+          <section data-markdown>
+            ### DEMO!
+
+            (right click in the browser and select `Inspect Element`)
+          </section>
+          <section data-markdown>
+            ![Inspect Source](images/InspectSource.png)
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            ## Terminology
+          </section>
+          <section data-markdown class="align-left">
+            ### Terminology
+
+            Some key terms or phrases that are used as a matter of course in the software industry. You may know some or all of these, or you may have heard the terms but be unclear about their actual meaning. They are common jargon among developers
+          </section>
+          <section data-markdown class="align-left">
+            ### Web Development
+
+            Web development is a broad term for the work involved in developing a web site for the Internet. In industry parlance, 'web development' usually refers to the more code-related tasks such as programming JavaScript, coding HTML and CSS. It can even extend to tasks related to the back end server infrastructure such as creating web services and handling business logic for a company or product.
+          </section>
+          <section data-markdown class="align-left">
+            ### Web Design
+
+            The process of planning & structuring a website; specifically, the visual aspects and assets for the site. Recently, this job description has also begun to include interaction design. That is, designing the user experience (UX), information architecture, and the flow of the application or site.
+          </section>
+          <section data-markdown class="align-left">
+            ### web site
+
+            A largely informational web page. While they may include dynamic elements and react to user inputs. The general purpose of a web site is to provide information about a person, business, product, or service.
+          </section>
+          <section data-markdown class="align-left">
+            ### web application
+
+            A more recent term to indicate a web site whose sole purpose is not just informational, but rather functional. Web applications have become robust enough to do everything from our taxes, manage our personal calendars, or even do standard desktop publishing tasks.
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            ##Your development toolchain
+          </section>
+          <section data-markdown>
+            ### Checklist
+
+            - [Google Chrome](http://chrome.google.com)
+            - [Sublime Text](http://sublimetext.com) / [Atom.io](http://atom.io)
+          </section>
+        </section>
+
+      <section>
+        <section data-markdown>
+          ##HTML 101
+        </section>
+
+        <section data-markdown>
+          ## HTML
+
+          ![It's About to go Down!](images/ItsAboutToGoDown.gif)
+        </section>
+        <section data-markdown>
+          ### _Hypertext Markup Language_
+          - Developed by Tim Berners-Lee
+          - Developed in 1989 at CERN
+          - Originally developed as a way to share documents
+        </section>
+        <section data-markdown>
+          ## HTML
+          ### Structure
+        </section>
+        <section data-markdown>
+          ![html example](images/html.png)
+        </section>
+        <section data-markdown>
+          ## CSS
+          ### Presentation
+        </section>
+        <section data-markdown>
+          ![html example](images/css.png)
+        </section>
+      </section>
+
+      <section data-markdown>
+        ## HTML
+
+        ### Hypertext Markup Language
+      </section>
+      <section>
+        <section data-markdown>
+          ## HTML Elements
+
+          An element is an individual component of HTML
+        </section>
+        <section data-markdown>
+          ### HTML Tags
+
+          A tag marks the beginning and end of an element.
+
+          _Tags are containers._ They tell you something about the content between the opening & closing tags.
+        </section>
+        <section data-markdown>
+          ### Anatomy of an HTML element
+          ![Anatomy of HTML](images/Opening-Tags.png)
+
+        </section>
+        <section data-markdown>
+          ### Example
+
+          `&lt;p&gt;This is a paragraph&lt;/p&gt;`
+
+          A paragraph elment consists of an opening `&lt;p&gt;` tag and a closing `&lt;/p&gt;` tag and the content between the tags.
+        </section>
+      </section>
+          <section>
+        <section data-markdown>
+          ## Different kinds of elements
+
+          Elements can be either container elements (they hold content) or stand-alone elements, sometimes called self-closing elements.
+        </section>
+        <section data-markdown>
+          ### Different kinds of elements
+
+          Paragraph elements are containers
+
+          `&lt;p&gt;Hi, I contain content&lt;/p&gt;`
+
+          Image elements are stand-alone
+
+          `&lt;img  src="james.jpg" /&gt;`
+        </section>
+        <section data-markdown>
+          ### Attributes
+
+          1. Provide additional information about HTML elements
+          1. Attribute tags include `class`, `id`, `style`, `lang`, and `src` (source)
+          1. Attributes are positioned inside the opening tag, before the right bracket
+          1. Attributes are paired with values. Key / value pairs are an important concept in programming.
+          1. Selected from a pre-defined set of possible attributes depending on the element.
+        </section>
+        <section data-markdown>
+          ### Values
+
+          1. Values are assigned to attributes
+          1. Values must be contained inside quotation marks
+        </section>
+        <section data-markdown>
+          ### example attributes
+
+          `&lt;p id="trademark"&gt;An inline element&lt;p&gt;`
+        </section>
+        <section >
+          <h3>example attributes</h3>
+
+          <pre>
+            <code>
+              &lt;div class="container"&gt;
+                A bunch of stuff!
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </section>
+      </section>
+
+      <section>
+        <section data-markdown>
+        ##DOCTYPE
+
+        The first element on every HTML page. It tells the browser to expect HTML and what version to use.
+
+        ####HTML 5
+
+        `&lt;!doctype html&gt;`
+
+        ####HTML 4
+
+        `&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd" &gt; `
+      </section>
+      <section data-markdown>
+        ###HTML tag
+
+        After the doctype, all page content must be contained in the `&lt;html&gt;` tags
+      </section>
+    <section data-markdown class='table-32px'>
+        ###Main HTML Tags
+
+        Tag | Description
+        --- | ---
+        `head` | Contains the page title and metadata
+        `body` | Contains all of the visible content
+        `title` | Optional tag. This is the name of your page. Nested in the `head` tag
+    </section>
+    </section>
+<!--NEW SECTION-->
+      <section>
+        <section data-markdown>
+          ##Nesting
+
+          HTML elements 'nest' inside of one another. The element that opens first closes last.
+        </section>
+        <section data-markdown class='align-left'>
+          ### nesting example
+
+          ![Nesting Example](images/nestingEx.png)
+
+        </section>
+      </section>
+
+<!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## Content Tags
+
+          </section>
+          <section data-markdown class='table-32px'>
+              ###common Content Tags
+
+              Tag | Description
+              --- | ---
+              `div` | defacto container element
+              `p` | used for body copy
+              `h1 thru h6` | designating titles/subtitles
+              `ol` | create a numbered list
+              `ul` | create an unordered list
+              `li` | list elements
+          </section>
+          <section data-markdown class='align-left'>
+            ### Sample HTML page
+
+            ![Sample HTML File](images/htmlFile.png)
+          </section>
+    </section>
+
+        <section>
+          <section data-markdown>
+            ## Links
+          </section>
+          <section data-markdown>
+            ### Anchor element
+
+            Links to other sites on the web (or within your project) are created using this element.
+
+            `&lt;a href="http://facebook.com"&gt;Facebook&lt;/a&gt;`
+
+            `&lt;a href="about.html"&gt;About Me&lt;/a&gt;`
+
+          </section>
+
+          <section data-markdown>
+              ### Link element
+
+              Unlike the anchor element. The `&lt;link&gt;` specifies relationships between the current document and an external resource.
+
+              Most often this manifests as how CSS files are included with an HTML file.
+
+              `&lt;link src="main.css" rel='stylesheet' /&gt;`
+          </section>
+        </section>
+
+        <section data-markdown>
+          ##HTML comments
+
+          Like any other good coding language, HTML offers comments. They operate like comments in any other language. They are ignored by the browser engine.
+
+          `&lt;!-- Hello, I am a comment. --&gt;`
+        </section>
+
+      <section>
+        <section data-markdown>
+          ## Tables
+        </section>
+        <section data-markdown>
+          ### Table element
+
+          Tables are a way to represent complex information in a grid format. They are made of rows and columns.
+
+          Tables are compound elements (similar to lists) they are made up of several elements.
+
+          Element | Description
+          --- | ---
+          `&lt;table&gt;` | Table element
+          `&lt;tr&gt;` | Table row
+          `&lt;td&gt;` | Table cell
+          `&lt;th&gt;` | Table header cell (optional)
+        </section>
+      <section >
+        <h3>Table example</h3>
+
+        <img src="images/tableExample.png" alt="table example" style="float: left">
+        <img src="images/renderedTable.png" alt="rendered table example">
+      </section>
+      <section data-markdown>
+        ##Styled tables
+
+        ![example table](images/table1.png)
+        ![example table](images/table2.gif)
+      </section>
+      <section data-markdown class='align-left'>
+        ### A note on tables
+
+        You may be thinking it now or you may think later that tables would be a great way to position content for site...
+      </section>
+      <section data-markdown >
+        Don't do that. Just... don't. When the web first came out people did this a lot but now there are much better ways to layout a site.
+      </section>
+    </section>
+
+      <section>
+        <section data-markdown>
+          ### What's wrong with this code?
+
+          Look at the following examples and tell me what is wrong with the code.
+        </section>
+          <section data-markdown>
+          ![Bad Code](images/wrong1.png)
+        </section>
+        <section data-markdown>
+          ![Bad Code](images/wrong2.png)
+        </section>
+        <section data-markdown>
+          ![Bad Code](images/wrong3.png)
+        </section>
+      </section>
+
+        <section>
+          <section data-markdown>
+            ##Folder Structure
+
+            This stuff is not exciting but it's _important_.
+          </section>
+          <section data-markdown class='align-left'>
+            ### Making Folders
+
+            Let's make sure you know how to make a folder in your operating system. This might seem like a silly thing to be sure we all know how to do but it's important because you'll making lots of folders in this class.
+          </section>
+          <section data-markdown class='align-left'>
+            ### The Rule of Threes
+
+            In the beginning our projects will be very simple but as our projects grow in complexity it will be beneficial to organize them. My personal rule is that if i have 3 of the same kind of file (.html, .css, etc). I will make a folder for them.
+          </section>
+        </section>
+
+        <section data-markdown>
+          ## Recap
+          You should understand and be able to use:
+
+          - HTML elements
+          - Proper nesting
+          - HTML Comments
+          - Correct folder structure
+        </section>
+
+        <section>
+          <section data-markdown class='align-left'>
+            ## Code Along
+          </section>
+          <section data-markdown class='align-left'>
+            ### Let's make our First Website
+
+            1. Make a folder, name it `FirstWebsite`
+            1. Make a file, name it `index.html`
+            1. Follow Along
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+          ## Homework
+          ###Build a website
+        </section>
+        <section data-markdown style="font-size:90%">
+          ###Homework 1-1
+
+          In a new project folder, create a basic website about yourself using only HTML. Your site should contain the following elements:
+
+          - Basics: Doctype, HTML, Head, & Body
+          - One or more division tags for organization
+          - At least 3 headings of different size
+          - A least 5 paragraphs
+          - One of each list type (ordered and unordered)
+          - At least 3 links
+          - At least 2 images
+          - some HTML comments
+          - 1 table
+        </section>
+        <section data-markdown>
+          ###Bonus!
+
+          Use some combination of elements such as:
+
+          - A list of links
+          - An image that serves as a hyperlink
+        </section>
+        <section data-markdown>
+          ####E-mail me to get today's homework
+
+          beaucarnes@gmail.com
+        </section>
+        <section data-markdown>
+          ####If you get stuck...
+
+          - Google it!
+          - E-mail me.
+        </section>
+      </section>
+
+      </section>
+      </div><!-- END SLIDES DIV -->
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+      Reveal.configure({ slideNumber: 'c / t' });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Front-End - Week 1</title>
+
+  <meta name="description" content="A front-end web development course by Grand Circus Detroit">
+  <meta name="author" content="Jeseekia Vaughn">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="reveal/css/reveal.css">
+  <!--Grand Circus branded theme -->
+  <link rel="stylesheet" href="reveal/gc/gc.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+  <link rel="stylesheet" href="reveal/css/main.css">
+
+
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"><img src="reveal/gc/photo/gcreveallogo.png"></a>
+    </header>
+
+    <div class="reveal convex center">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <section class="slides">
+
+        <!-- DAY 2 -->
+        <section data-markdown>
+          ##Intro to Web Development Part One: HTML &amp; CSS
+          ###Week 1 Session 2
+        </section>
+
+        <section data-markdown>
+          ##Review homework
+          - Any questions?
+          - Volunteers to share homwork.
+          - https://www.bitballoon.com
+        </section>
+
+        <section data-markdown>
+          ##Goals for tonight
+          - CSS Styles
+          - Linking HTML and CSS
+          - Inline and Block Elements
+          - Character Codes
+        </section>
+
+
+        <section data-markdown>
+          ## CSS 101
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## Cascading Style Sheets
+
+            (remember that 'cascading' part)
+          </section>
+          <section>
+            <h3>CSS in the wild</h3>
+            <pre>
+              <code>.reveal.page .slides section {
+                padding: 30px;
+                min-height: 700px;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box; }
+
+                .reveal.page .slides section.past {
+                z-index: 12; }
+
+                .reveal.page .slides section:not(.stack):before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: rgba(0, 0, 0, 0.1);
+                -webkit-transform: translateZ(-20px);
+                transform: translateZ(-20px); }
+              </code>
+            </pre>
+          </section>
+          <section data-markdown>
+            ### CSS Rules
+
+            Individual components of CSS are called rules
+          </section>
+          <section data-markdown>
+            ### CSS Rules
+
+            CSS rules are made up of two parts:
+            - One or more selectors
+            - One or more declarations
+            - The declaration must be inside curly braces that follows the selector
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ### CSS Syntax
+
+            ![css](images/cssSyntax.gif)
+          </section>
+          <section>
+            <h3>CSS Comments</h3>
+
+            <p>Just like HTML, CSS offers comments:</p>
+
+            <pre><code class="css">/* This is a CSS comment,
+              it can be multi-line */
+            </code></pre>
+          </section>
+        </section>
+        <!--NEW SECTION-->
+
+        <section data-markdown style='font-size: 90%'>
+          ### CSS Declarations
+          - Declarations are made up of the property and value of the style you want to apply.
+
+          - They can be grouped together so that more than one declaration may be applied to a selected element.
+
+          - Declaration groups must be surrounded by curly brackets.
+
+          - Declarations must end in a semicolon.
+          ![css declarations](images/cssDeclarations.png)
+        </section>
+
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown class='align-left'>
+            ### CSS Selector
+
+            The selector instructs the browser to search the page for any HTML element that matches the given criteria. It applies any applicable declarations to that element.
+          </section>
+          <section data-markdown class='align-left'>
+            ###CSS Selector - element
+
+            Elements can be selected by their element name. In this case, all elements of that element type will be selected and have the styles applied.
+          </section>
+          <section data-markdown>
+            ###CSS Selector - element
+
+            ![element selector](images/elementSelector.png)
+          </section>
+          <section data-markdown class='align-left'>
+            ###CSS Selector - class
+
+            Elements can be selected based on HTML attributes such as class. In this case all elements that have a matching class attribute will be selected.
+          </section>
+          <section data-markdown>
+            ###CSS Selector - class
+
+            ![Class selector](images/classSelector.png)
+          </section>
+          <section data-markdown class='align-left'>
+            ###CSS Selector - ID
+
+            Elements can also be selected based on HTML attribute ID. In this case only one element would be selected, as HTML IDs are intended to be unique.
+          </section>
+          <section data-markdown>
+            ###CSS Selector - ID
+
+            ![Class selector](images/idSelector.png)
+          </section>
+          <section data-markdown class='align-left'>
+            ###CSS Selector - descendent selectors
+
+            Selectors can be combined to become more specific. This example selects searches for any paragraph tag that is nested inside a div tag.
+
+            ![child selector](images/childSelector.png)
+          </section>
+          <section data-markdown class='align-left'>
+            ###CSS Selector - multiple
+
+            In addition a set of declarations can be applied to more than one selector by listing a number of comma-separated selectors.
+
+            ![child selector](images/multiSelector.png)
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ###Pop Quiz hot shot
+
+            Look at the following examples and tell me which Elements (if any) would be returned by the following selectors.
+          </section>
+          <section >
+            <h3>Pop quiz</h3>
+
+            <pre><code class="css">
+            p {
+              /* blah blah */
+            }
+          </code></pre>
+        </section>
+        <section >
+          <h3>Pop quiz</h3>
+
+          <pre><code>
+          #fuzzy {
+            /* blah blah */
+          }
+        </code></pre>
+      </section>
+      <section >
+        <h3>Pop quiz</h3>
+
+        <pre>
+          <code>
+        .blue {
+          /* blah blah */
+        }
+          </code>
+        </pre>
+      </section>
+    <section >
+      <h3>Pop quiz</h3>
+
+      <pre><code>
+      .blue, #fuzzy {
+        /* blah blah */
+      }
+    </code></pre>
+  </section>
+  <section >
+    <h3>Pop quiz</h3>
+
+    <pre><code>
+    div p {
+      /* blah blah */
+    }
+  </code></pre>
+</section>
+</section>
+<!--NEW SECTION-->
+<section data-markdown>
+  ## Questions?
+</section>
+<!--NEW SECTION-->
+<section>
+  <section data-markdown>
+    ## CSS Properties
+  </section>
+  <section data-markdown>
+    ###CSS Properties
+
+    There are literally hundreds of css properties that are available for use. We don't have time to go over more than just a few. We will go over a few of the most common. However, the best strategy is to google for styling options as you're working.
+  </section>
+  <section data-markdown class='table-32px'>
+    ###common CSS Properties
+
+    Property | Description
+    --- | ---
+    `background-color` | background color for an element
+    `color` | color of the _text_ in an element
+    `font-family` | typeface for text
+    `font-size` | size for text (px, %, em, pt)
+    `font-weight` | used to bold text (if possible)
+    `text-decoration` | used for underline (mostly)
+    `height` | specifies the height of an element
+    `width` | specifies the width of an element
+  </section>
+  <section data-markdown class='table-32px'>
+    ###Color in CSS
+
+    Method | Syntax | Description
+    --- | --- | ---
+    color name | `white` | a list of 140 predefined colors
+    hexidecimal | `#FF0000` | RGB values in hex 00 - FF (0 - 255)
+    RGB | `rgb(255, 0, 187)` | RGB values in decimal numbers (0 - 255)
+    RGBA | `rgba(255, 0, 187, 0.5)` | RGB values with an added alpha (opacity) value
+  </section>
+  <section data-markdown>
+    ###CSS Units
+
+    Method | Syntax | Description
+    --- | --- | ---
+    em  | `1em` | Scalable unit based on font size
+    pixels | `16px` | Fixed number of pixels
+    percent  | `120%` | Percent value based on font size
+  </section>  
+  <section data-markdown>
+    ###CSS Properties Link
+
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
+  </section>
+</section>
+<!--NEW SECTION-->
+<section>
+  <section data-markdown>
+    ## Folder Structure
+
+    - Still not exciting
+    - Still important
+  </section>
+  <section data-markdown>
+    ### Project Setup
+
+    Wherever you are going to keep your project work:
+    - Create a new folder called CSS-Exercise
+    - Inside that folder create two files called `index.html` & `main.css`
+  </section>
+  <section>
+    <h3>Set up</h3>
+    <h4>Linking HTML and CSS files</h4>
+
+    <p>Add this element to your HTML page's head</p>
+    <pre> <!-- this is not indented correctly because it's 'preformated' -->
+      <code>
+        <link href='main.css' rel='stylesheet' />
+      </code>
+    </pre>
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    ## Code Along
+    ###Styling an HTML page
+  </section>
+  <section data-markdown class='align-left'>
+    ### set up
+
+    1. Make a new folder
+    1. Create new files `index.html` and `styles.css`
+    1. Set up a basic HTML page (doctype, html, head, body)
+    1. `link` the css file to the html page
+    1. Test the linkage
+    1. Add some HMTL content (tags, classes, and ids)
+  </section>
+  <section>
+    <h3>Simple CSS Styles</h3>
+
+    <p>Include at least one of each:</p>
+    <ul>
+      <li>class selector</li>
+      <li>id selector</li>
+      <li>child selector</li>
+      <li>multiple selectors</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Simple CSS Styles</h3>
+    <p>Apply the following CSS properties:</p>
+    <ul>
+      <li>background-color</li>
+      <li>color</li>
+      <li>font-family</li>
+      <li>font-size</li>
+      <li>one or more additional properties of your choice</li>
+    </ul>
+  </section>
+</section>
+
+<!--NEW SECTION-->
+
+<!-- CSS POSITIONING -->
+<section data-markdown>
+  ## CSS POSITIONING
+</section>
+<section>
+  <section data-markdown>
+    ## Block vs. Inline Elements
+  </section>
+  <section data-markdown class='align-left'>
+    ###Block Elements
+
+    **Block elements** each appear on a new line of a web page, like paragraphs. Spatially, what is happening is that the block element takes up all of the horizontal space it can. It stretches to fill all the space to the left and right of the element within its parent container.
+  </section>
+  <section data-markdown class='align-left'>
+    ###Inline Elements
+
+    **Inline elements** are rendered without starting a new line. They appear side by side until reaching the edge of its parent container. Then it will start a new line.
+  </section>
+  <section data-markdown>
+    ###Block vs. Inline Elements
+
+    ![block versus inline elements](images/example-blockinline.png)
+  </section>
+  <section data-markdown>
+    ###Block vs. Inline Elements
+
+    - _Inline element_: `&lt;a&gt; &lt;img&gt; &lt;span&gt;`
+
+    - _Block element_: `&lt;div&gt; &lt;p&gt; &lt;ul&gt; &lt;li&gt; &lt;table&gt;` ...and just about everything else.
+  </section>
+  <section data-markdown class='align-left'>
+    ### Riddle me this
+
+    How could you make a list of anchor tags (inline element), display on a page as a verticle list?
+  </section>
+</section>
+
+<section>
+  <section data-markdown>
+    ##Homework
+  </section>
+  <section data-markdown>
+    ### Homework 1-2
+
+    Create a 2 page website about yourself. It should include:
+    - A title
+    - 3 images that link to external sites
+    - A nested list
+    - Links between the pages
+    - A brief bio
+
+    Style the page using CSS
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    ##Bonus (if time)
+  </section>
+  <section data-markdown>
+    ### Domains and webhosting discussion
+  </section>
+</section>
+
+
+</section>
+</div><!-- END SLIDES DIV -->
+
+<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal/js/reveal.js"></script>
+
+<script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+        { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+        { src: 'reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+      Reveal.configure({ slideNumber: 'c / t' });
+    </script>
+
+  </body>
+  </html>
