@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Front-End - Week 1</title>
+    <meta name="description" content="A front-end web development course by Grand Circus Detroit">
+    <meta name="author" content="Jeseekia Vaughn">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!--Grand Circus branded theme -->
+    <link rel="stylesheet" href="reveal/gc/gc.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="reveal/css/main.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="reveal/gc/photo/gcreveallogo.png"></a>
+    </header>
+    <div class="reveal convex center">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <section class="slides">
+        <!-- DAY 5 -->
+        <section data-markdown>
+          ##Intro to Web Development Part One: HTML &amp; CSS
+          ###Week 3 Session 1
+        </section>
+        <section data-markdown>
+          ##Goals for tonight
+          - CSS3 Properties
+          - Internet 101
+          - Domains
+          - Servers and Hosting
+        </section>
+        <section>
+          <section data-markdown>
+            ##Code Challenge
+          </section>
+          <section data-markdown class="align-left">
+            ### Code Challenge
+            Create a 3x3 grid of boxes with alternating colors and border types using pseudo-selectors
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ##CSS3 Features
+          </section>
+          <section data-markdown class="align-left">
+            ###CSS3 Vendor Prefix
+            Not all browsers support all of the newer CSS3 properties, which means we sometimes need to create rules for certain browsers
+          </section>
+          <section >
+            <h3>border-radius usage</h3>
+                        <pre>
+                            <code class='css'>
+                .example {
+                  -moz-border-radius: 20px;
+                  -ms-border-radius: 5%;
+                  -webkit-border-radius: 1.2em;
+                  -o-border-radius: 10px;
+                  border-radius: 10%;
+                }
+                            </code>
+            </pre>
+          </section>
+          <section data-markdown>
+            ###Vendor prefixes
+            Order matters! The non-prefixed property should always go last.
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown class="align-left">
+            ###Handy CSS3 properties
+            There are a great many very handy CSS3 properties that you may need to use on your current and future projects. They can add a level of polish to your project that really sells it. That said, we dont have a time to go over more than a few of them in detail. Here is a list that you can investigate further.
+          </section>
+          <section data-markdown class='table-32px'>
+            ###CSS3 properties
+            Property | Description
+            --- | ---
+            `border-radius` | creates rounded corners or circular borders for elements
+            `rgba` | An alternate way to define color and alpha
+            `opacity` | Controls the transparency of an element
+            `box-shadow` | Adds a calculated shadow effect to an element
+            `text-shadow` | Adds a calculated shadow effect to an element
+            `transforms` | Adds the ability to transform HTML elements (rotation, scale, translate)
+            `animations` | Allows for one more or property changes to be applied as an animation
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## Responsive Design
+          </section>
+          <section data-markdown>
+            ###Responsive Design
+            Changes your website presentation in relation to the screen size
+          </section>
+          <section data-markdown class="align-left">
+            ###Media Queries
+            This is done via Media Queries. Media queries are able to detect a bunch of things about the device with which you're viewing a site. The browser can use specifically developed CSS styles for those different screen sizes.
+          </section>
+          <section >
+            <h3>Media Query example</h3>
+                        <pre>
+                            <code class='css'>
+              @media (max-width: 600px) {
+                /* specific styles for this device size */
+                body{
+                  font-size: 1.1em;
+                }
+              }
+                            </code>
+            </pre>
+          </section>
+          <section data-markdown>
+            ###Things to do with media queries
+            - resize images / font
+            - collapse navigation
+            - remove some larger content (video / images)
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ##Code Along
+          </section>
+          <section data-markdown>
+            ### Code Along - Media Queries
+            - Make a new project (index.html, styles.css)
+            - Add media queries for `max-width:` at 900px and 600px
+            - Add a media query for `min-width:` at 1200px
+            - In each of these media queries, change the `background-color` of the page.
+            - Grab the edge of your browser and squish it down to see each of the media queries take effect
+          </section>
+        </section>
+        <!--NEW SECTION-->
+        <section data-markdown>
+          ## Questions?
+        </section>
+        <section>
+          <section data-markdown>
+            ##Domains
+          </section>
+          <section data-markdown class="align-left">
+            ###What are domains?
+            Domains (e.g., www. facebook.com) are registered with the Domain Name System through various providers
+            The Domain Name System allows a website’s IP address (192.0.43.10) to be mapped to a specific domain name (www.example.com)
+          </section>
+          <section data-markdown >
+            ###Dedicated Domain Names
+            www.grandcircus.co
+            vs.
+            www.grandcircusco.tumblr.com
+          </section>
+          <section data-markdown>
+            ###Domain Names 101
+            1. As short as possible
+            1. Easy to type
+            1. Easy to remember
+            1. Unique
+            1. Intuitive
+            1. Avoid hyphens & numbers
+            1. End in “.com” if possible
+          </section>
+          <section data-markdown>
+            ###Domain Name Vendors
+            Namecheap (www.namecheap.com)
+            Hover (www.hover.com)
+            DreamHost (www.dreamhost.com)
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ##Servers/Hosting
+          </section>
+          <section data-markdown class="align-left">
+            ###What does it mean?
+            Websites are hosted on web servers, which are large computers connected to a network
+            Web servers “serve up” content and services, which can include web sites and applications, games, etc.
+          </section>
+          <section data-markdown>
+            ###How it works
+            1. Type www.google.com into the address bar
+            1. DNS connects the browser (user agent) to Google’s hosting servers
+            1. Google’s servers send back content for your browser to display on your computer (client)
+            (Sometimes, code must be compiled by the server before it can be sent back to your machine.)
+          </section>
+          <section data-markdown>
+            ##SERVERS &amp; HOSTING – WHO READS WHAT?
+          </section>
+          <section data-markdown>
+            ###Client-side
+            Client-side programming languages can be parsed on the client side within your browser after a web page is loaded.
+            ###Server-side
+            Server-side programming languages are parsed by the server and run scripts before the page is loaded, not after.
+          </section>
+          <section data-markdown>
+            ###Client-side Languages
+            - Markup languages (HTML & CSS)
+            - JavaScript
+          </section>
+          <section data-markdown>
+            ###Server-side Languages
+            - Ruby
+            - Python
+            - PHP
+            - Perl
+            - Java
+            - C#.NET
+          </section>
+          <section data-markdown>
+            ###Hosting Vendors
+            HostGator (www.hostgator.com)
+            DreamHost (www.dreamhost.com)
+            BlueHost (www.bluehost.com)
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ##Internet 101
+          </section>
+          <section data-markdown>
+            ###Setting up a website
+            1. Choose &amp; purchase a domain name
+            1. Purchase web hosting
+            1. Follow your hosting provider’s instructions to set up your domain name
+            1. Using something like FTP (file transfer protocol), upload your HTML, CSS & JavaScript files
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ##Homework
+          </section>
+          <section data-markdown>
+            ###Create a responsive site
+            Create a site with media queries for:
+            - 300px
+            - 600px
+            - 900px
+            Apply at least two changes for each media query
+            You can reuse an old site.
+          </section>
+        </section>
+      </section>
+      </div><!-- END SLIDES DIV -->
+      <script src="reveal/lib/js/head.min.js"></script>
+      <script src="reveal/js/reveal.js"></script>
+      <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      // Optional reveal.js plugins
+      dependencies: [
+      { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+      { src: 'reveal/plugin/notes/notes.js', async: true }
+      ]
+      });
+      Reveal.configure({ slideNumber: 'c / t' });
+      </script>
+    </body>
+  </html>

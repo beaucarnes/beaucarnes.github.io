@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Front-End - Week 1</title>
+    <meta name="description" content="A front-end web development course by Grand Circus Detroit">
+    <meta name="author" content="Jeseekia Vaughn">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!--Grand Circus branded theme -->
+    <link rel="stylesheet" href="reveal/gc/gc.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="reveal/css/main.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="reveal/gc/photo/gcreveallogo.png"></a>
+    </header>
+    <div class="reveal convex center">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <section class="slides">
+        <!-- DAY 6 -->
+        <section data-markdown>
+          ##Intro to Web Development Part One: HTML &amp; CSS
+          ###Week 3 Session 2
+          ###LAST DAY!
+        </section>
+        <section data-markdown>
+          ##Goals for tonight
+          - Bootstrap
+          - Mega-Bootstrap Code Along
+        </section>
+        <!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ##Bootstrap
+          </section>
+          <section data-markdown>
+            ###Bootstrap
+            HTML5 & CSS framework that combines
+            - Responsive Design
+            - Grid Positioning
+            - Iconography
+            - Mobile Templating
+            - Javascript plugins
+          </section>
+          <section data-markdown class='align-left'>
+            ###About Bootstrap
+            Bootstrap is a CSS framework that makes making halfway—decent—looking sites a snap!
+            It was created by Twitter and was made open source a few years ago
+          </section>
+          <section data-markdown>
+            ###Where to get it
+            http://www.getbootstrap.com > Getting Started
+            Hit the "Download Bootstrap" button
+          </section>
+          <section>
+            <h3>How to use it</h3>
+            <ol>
+              <li>Unzip the file and rename the folder "bootstrap"</li>
+              <li>Make a copy of this new folder into the your project containing your html and css files</li>
+              <li>Link to the bootstrap css in your index.html file</li>
+            </ol>
+            <pre>
+              <code class="html" id="no-wrap">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+              </code>
+            </pre>
+          </section>
+          <section data-markdown >
+            ###Bootstrap Grids
+            The best of CSS positioning and table layouts
+            - 12 columns wide
+            - Infinite rows
+            - Responsive-ready out of the box
+            - Uses only CSS
+          </section>
+          <section>
+            <h3>Rows & Columns</h3>
+            <pre>
+                  <code class='html'>
+    <main class="container">
+      <section class="row">This is Row 1</section>
+      <section class="row">
+        <div class="col-md-6"> This is Row 2 Col 1 </div>
+        <div class="col-md-6"> This is Row 2 Col 2 </div>
+      </section>
+    </main>
+              </code>
+            </pre>
+          </section>
+          <section data-markdown>
+            ## DEMO
+          </section>
+
+          <section data-markdown>
+            ![bootstrap cdn](images/bootstrap-cdn.png)
+
+            Like jQuery, Bootstrap can also be linked via CDN.
+          </section>
+          <section data-markdown>
+            ###CSS Components
+            Bootstrap provides many useful built-in CSS Components
+            - Grid layout
+            - Buttons
+            - Primary and Secondary headings
+            - Form elements
+            - Automatic table styling
+            - Helper classes
+          </section>
+          <section data-markdown class="align-left">
+            ###CSS Components
+
+            Bootstrap provides great docs which demonstrate each CSS component and how to add them to your site.
+
+            There are so many things available in just the CSS portion of the Bootstrap. We don’t have time to look at them all. We will look at and demonstrate a few. For others, as always, read the docs.
+          </section>
+          <section class="align-left">
+            <h3>Using Bootstrap</h3>
+            <p>As said before, all of the bootstrap components are shown on their docs but for the most part it’s as simple adding some classes to your html.</p>
+            <p>ex:</p>
+            <pre><code id="no-wrap"><a href="#" role="button" class="btn btn-primary">A button!</a></code></pre>
+          </section>
+        </section>
+        <section>
+          <section data-markdown class='align-left'>
+            ## Code Along
+          </section>
+          <section data-markdown class='align-left'>
+            ### Bootstrap
+
+            Let's make a Bootstrap site!
+            - Download Bootstrap
+            - Use bootstrap's grid
+            - Make a header with blog title center
+            - Nav section on left, 1/3rd page width
+            - Main section on right, 2/3rd page width
+            - Make an About Me page with a bio and avatar
+            - Make a Footer section with a 3 columns of links
+          </section>
+        </section>
+        <section data-markdown>
+          ## Recap
+          You should understand and be able to use:
+
+          - Bootstrap Grid
+          - Bootstrap CSS Components
+        </section>
+        <section>
+          <section data-markdown>
+            ## Mega Code-Along
+            ###Bringing it all together
+          </section>
+          <section data-markdown style="font-size:80%" class='align-left'>
+            ###Blog Site
+            Create a template for a blog page using the Bootstrap Grid. The page should have the following:
+
+            - Header with blog title centered.
+            - At least 1 faked article of blog content that includes:
+              - Title, byline, and date
+              - At least 1 floated image with text wrapping around it in the article
+            - Use bootstrap glyphicons
+            - Footer with copyright, contact link, some other content
+            - BONUS: Research and build in a Bootstrap JavaScript Plugin (ex. Carousel, Accordion, Collapse, Tooltip, Popover, or Modal)
+            - OPTIONAL BONUS: Create a left sidebar of My Favorite Things. A verticle list of stuff you like (books, movies, whatever) with images, title and a short blurb about it.
+          </section>
+        </section>
+      </section>
+      </div><!-- END SLIDES DIV -->
+      <script src="reveal/lib/js/head.min.js"></script>
+      <script src="reveal/js/reveal.js"></script>
+      <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      // Optional reveal.js plugins
+      dependencies: [
+      { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+      { src: 'reveal/plugin/notes/notes.js', async: true }
+      ]
+      });
+      Reveal.configure({ slideNumber: 'c / t' });
+      </script>
+    </body>
+  </html>
