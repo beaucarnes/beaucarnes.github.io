@@ -1,0 +1,26 @@
+
+@media (max-width: 600px) {
+	body {
+		background-color: blue;	
+	}
+
+	.nav {
+		display: none;
+	}
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+	body {
+		background-color: green;	
+	}
+
+	.dropdown {
+		display: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	body {
+		background-color: red;	
+	}
+}
