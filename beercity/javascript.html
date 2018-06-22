@@ -1,0 +1,1416 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>JavaScript</title>
+
+    <meta name="description" content="HTML / CSS / JavaScript course for Beer City Code">
+    <meta name="author" content="Beau Carnes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!--Grand Circus branded theme -->
+    <link rel="stylesheet" href="reveal/bc/bc.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="reveal/css/main.css">
+
+
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal convex center">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <section class="slides">
+
+        <!-- What is JavaScript-->
+        <section>
+          <h3>What is JavaScript?</h3>
+          <img src="images/not-java.png" alt="Java logo with a no symbol"/>
+          <p>JavaScript is not Java</p>
+        </section>
+
+        <section>
+          <h3>What is JavaScript?</h3>
+          <ul>
+            <li>Created by Brendan Eich as "LiveScript" in 1995, which got renamed to "JavaScript"</li>
+            <li>A <b>client-side processing language</b>. A browser reads the code and runs it directly.</li>
+            <li>Interfaces with <b>HTML</b> & <b>CSS</b>.</li>
+            <li>Lets you build dynamic webpages that respond to input from users.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Image lightboxes</p>
+          <a href="https://gyazo.com/01b0065c2feee682dbffe3d7bf4e5545"><img src="https://i.gyazo.com/01b0065c2feee682dbffe3d7bf4e5545.gif" alt="https://gyazo.com/01b0065c2feee682dbffe3d7bf4e5545"/></a>
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Fully featured web applications</p>
+          <a href="https://gyazo.com/1ea0791eece706f4ab9ff8213a4e1fbf"><img src="https://i.gyazo.com/1ea0791eece706f4ab9ff8213a4e1fbf.gif" alt="https://gyazo.com/1ea0791eece706f4ab9ff8213a4e1fbf"/></a>
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Keep track of users with <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a> or storing data with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a>.</p>
+          <a href="https://gyazo.com/56208a5722a6f7ab682c2baddbba8ce3"><img src="https://i.gyazo.com/56208a5722a6f7ab682c2baddbba8ce3.gif" alt="https://gyazo.com/56208a5722a6f7ab682c2baddbba8ce3"/></a>
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Interactive elements like tabs, sliders, etc</p>
+          <a href="https://gyazo.com/4841d6f99367b28a1d6fca4395f408a2"><img src="https://i.gyazo.com/4841d6f99367b28a1d6fca4395f408a2.gif" alt="https://gyazo.com/4841d6f99367b28a1d6fca4395f408a2"/></a>
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Drawing & animation</p>
+          <a href="https://gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9"><img src="https://i.gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9.gif" alt="https://gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9"/></a>
+        </section>
+
+        <!-- Using JavaScript -->
+        <section>
+          <h3>Script Tags</h3>
+          <p>You can mix JavaScript and HTML. The <b>script tag</b> tells your browser the stuff inside is code, not content.</p>
+<pre><code class="html">&lt;script&gt;
+  CODE GOES HERE
+&lt;/script&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>JavaScript Files</h3>
+          <p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
+<pre><code class="html">&lt;script src="path/to/file.js"&gt;&lt;/script&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Test Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+    &lt;script&gt;
+      alert('Hello World!');
+      console.log('Secret message');
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </section>
+
+        <!-- Programming -->
+
+        <section>
+          <h3>Thinking like a programmer</h3>
+          <p>Computers are great at <em>processing</em>. They are bad at <em>understanding</em>.</p>
+          <p>When you write a program, you must break down every step into simple pieces.</p>
+        </section>
+
+        <section>
+          <h3>How does JavaScript work?</h3>
+          <div class="left-align">
+            <ol>
+              <li>You visit a website with JavaScript code on it.</li>
+              <li>Your browser (e.g., Chrome) reads the code line-by-line.</li>
+              <li>The browser runs each line of code as it reads it.</li>
+              <li>Based on these instructions, the browser performs calculations and changes the HTML and CSS on the page.</li>
+              <li>If the browser finds code it doesn't understand, it stops running and creates an error message.</li>
+            </ol>
+          </div>
+        </section>
+
+        <section>
+          <h3>Console</h3>
+          <p>You can see what's going on in the <b>console</b>.</p>
+          <img src="images/console-panel.png">
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <ul>
+            <li>Open the console.</li>
+            <li>In Chrome, use the keyboard shortcut:
+              <ul>
+                <li>Mac: <strong>Command + Option + J</strong></li>
+                <li>Windows: <strong>Control + Shift + J</strong></li>
+              </ul>
+            <li>Try typing in 2 + 2 and hitting enter.</li>
+          </ul>
+        </section>
+
+        <!-- Using JavaScript -->
+        <section>
+          <h3>Statements</h3>
+          <p>Each instruction in JS is a "statement", like:</p>
+<pre><code class="javascript">console.log('Hello World!');
+console.log('I am glad to meet you');
+console.log('I am fuzzy');
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Comments</h3>
+          <p>You can leave comments in your code&mdash;notes that people can read but computers will ignore.</p>
+<pre><code class="javascript">/*
+I can make long comments
+with multiple lines here
+*/
+
+console.log('Hello World!'); // Or make short comments here</code></pre>
+        </section>
+
+        <section>
+          <h3>Getting results onto your screen</h3>
+          <p>Open a popup box.</p>
+<pre><code class="javascript">alert('Hello World!');
+</code></pre>
+          <p>Display a message in your console.</p>
+<pre><code class="javascript">console.log('Hello World!');
+</code></pre>
+          <p>Add something to the page.</p>
+<pre><code class="javascript">document.write('Hello World!');
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <ul>
+            <li>Add a comment to the code.</li>
+            <li>Try different ways of printing a message.</li>
+          </ul>
+        </section>
+
+      <!-- Variables -->
+        <section>
+          <h3>Variables</h3>
+          <p>Just like 'x' in algebra, a variable is a named container for a value that can change.</p>
+          <img src="images/empty-glass.jpg" alt="Empty glass" class="noborder"/>
+          <p class="credit">
+            <small>Photo credit: <a href="http://www.flickr.com/photos/giuliag/3570562404/" target="_blank">giulia gasparro</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h3>Declaring a Variable</h3>
+          <p>To declare (create) a variable, just type the word <code>var</code> and the variable name. You can also declare a variable with <code>let</code> or <code>const</code>.</p> 
+<pre><code class="javascript">var numberOfKittens;
+let numberOfDoggies;
+const numberOfTurtles;</code></pre>
+          <p>You can initialize the variable.</p>
+<pre><code class="javascript">var numberOfKittens = 5;
+let numberOfDoggies = 50;
+const numberOfTurtles = 500;</code></pre>
+<p><i>Which line of code on this page will cause an error?</i></p>
+        </section>
+
+        <section>
+          <h3>Variable Values</h3>
+          <ul>
+            <li>When you first create a variable, it does not have a value (it is <code>undefined</code>).</li>
+            <li>You can set a value for a variable.</li>
+            <li>Variables can hold different types of data.</li>
+            <li>The value of a variable can change over time.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Naming Variables</h3>
+          <ul>
+            <li>The variable name is case-sensitive.</li>
+            <li>A new variable should have a unique name.</li>
+            <li>Variable names need to start with a letter, <code>$</code>, or <code>_</code>.</li>
+            <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a>.</li>
+            <li>Choose clarity and meaning for humans to read later.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Using a Variable</h3>
+          <p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
+<pre><code class="javascript">var numberOfKittens = 5;
+console.log(numberOfKittens);
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <p>Create a variable and give it a valid name and value. Then, display the value.</p>
+        </section>
+
+        <!-- Data Types-->
+        <section>
+          <h3>Data Types</h3>
+          <ul>
+            <li><b>string</b> string of characters
+              <pre><code class="javascript">var userName = 'Jane Lane';</code></pre>
+            </li>
+            <li><b>number</b> integer or floating point
+              <pre><code class="javascript">var myAge = 30;</code></pre>
+            </li>
+            <li><b>boolean</b> true or false
+              <pre><code class="javascript">var catsAreBest = true;</code></pre>
+            </li>
+            <li><b>undefined</b> value that hasn't been defined
+              <pre><code class="javascript">var favoriteThings;</code></pre>
+            </li>
+            <li><b>null</b> an explicitly empty value
+              <pre><code class="javascript">var goodPickupLines = null;</code></pre>
+            </li>
+          </ul>
+        </section>
+
+      <!-- Numbers-->
+        <section>
+          <h3>Numbers!</h3>
+          <img src="images/kitten-basket.jpg" alt="Cats in a basket"/>
+          <p class="credit">
+            <small>Photo credit: <a href="http://www.flickr.com/photos/tom-poes/2159348460/" target="_blank">WJ van den Eijkhof</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h3>Numbers</h3>
+          <p>Variables can be numbers, either integers or floats (decimals).</p>
+<pre><code class="javascript">var numberOfKittens = 5;
+var cutenessRating = 9.6;
+</code></pre>
+          <p>JavaScript automatically converts integers to floats</p>
+          <p><code>NaN</code> = Not-A-Number</p>
+        </section>
+
+        <section>
+          <h3>Arithmetic Operators</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Example</th>
+                <th>Name</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>-a</code></td>
+                <td> Negation</td>
+                <td>Opposite of <code>a</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a + b</code></td>
+                <td>Addition</td>
+                <td>Sum of <code>a</code> and <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a - b</code></td>
+                <td>Subtraction</td>
+                <td>Difference of <code>a</code> and <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a * b</code></td>
+                <td>Multiplication</td>
+                <td>Product of <code>a</code> and <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a / b</code></td>
+                <td>Division</td>
+                <td>Quotient of <code>a</code> and <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a % b</code></td>
+                <td>Modulus</td>
+                <td>Remainder of <code>a</code> divided by <code>b</code>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      <!-- Strings -->
+        <section>
+          <h3>Strings</h3>
+          <p>Variables can be strings (groups of characters). You put your string in single or double quotes.</p>
+<pre><code class="javascript">var kittensName = 'Fluffy';</code></pre>
+          <p>If you want to use a quote in your string, you'll need to <b>escape</b> it with a backslash.</p>
+<pre><code class="javascript">console.log('I\'d like to use an apostrophe');</code></pre>
+        </section>
+
+        <section>
+          <h3>String Operators</h3>
+          <p>You can put strings together with a <code>+</code>, the concatenation operator.</p>
+          <pre><code class="javascript">var kittensName = 'Fluffy ';
+var fullName = kittensName + 'McDougle';
+console.log(fullName); // Outputs 'Fluffy McDougle'
+</code></pre>
+        </section>
+
+        <section>
+          <h3>String Operators</h3>
+          <p>You can also use <code>+=</code> to add things to the end of a string.</p>
+<pre><code class="javascript">var kittensName = 'Admiral ';
+kittensName += 'Snuggles';
+console.log(kittensName); // Outputs 'Admiral Snuggles'
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Combining strings and numbers</h3>
+          <p>You can use concatenation to mix strings and numbers. When you do this, JavaScript will treat the number like a string.</p>
+<pre><code class="javascript">var numberOfFruit = 6;
+var typeOfFruit = 'bananas';
+var allTheFruit = 'I have ' + numberOfFruit + ' ' + typeOfFruit + '!';
+console.log(allTheFruit);
+</code></pre>
+        </section>
+                <section>
+                  <h2>Template Strings</h2>
+                  <p>Allow multi-line strings</p>
+                  <div class="clear">
+                    <div class="halfblock fragment">
+                      <h3 class="green underlined">ES5:</h3>
+                      <pre><code class="xml">'<div>' +
+  '<h1>Hello ' + str + '!</h1>' +
+'</div>';</code></pre>
+                      <p class="right small fragment">becomes</p>
+                    </div>
+                    <div class="halfblock fragment">
+                      <h3 class="green underlined">ES6:</h3>
+                      <pre><code class="xml">`<div>
+  <h1>Hello ${str}!</h1>
+</div>`;</code></pre>
+                    </div>
+                  </div>
+                  <aside class="notes">Ask who's used the ES5 version and gotten confused about plus signs, quotation marks, etc. when adding variables</aside>
+                </section>
+
+                <section>
+                  <h2>Using Template Strings</h2>
+                  <pre><code class="javascript">const message = `User ${name} scored ${score} on the exam`;</code></pre>
+                  <p>&nbsp;</p>
+                  <ul>
+                    <li>Use backticks (<code>` `</code>) around the string</li>
+                    <li class="fragment">Use <code>${ }</code> around any <span class="orange">variable</span> or <span class="orange">expression</span></li>
+                  </ul>
+                </section>
+        <section>
+          <h3>Try It</h3>
+          <p>Create a program to calculate the tip at a restaurant. It should:</p>
+          <ul>
+            <li>Have variables for the bill <b>pre-tip</b> and the <b>tip percentage</b>.</li>
+            <li>Calculate the total bill.</li>
+            <li>Output a sentence like "Your total bill, with tip, is $14.75".</li>
+            <li>Bonus: Use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed" target="_blank"><code>toFixed()</code></a> to round the bill total to 2 decimals.</li>
+          </ul>
+        </section>
+              <!-- Functions -->
+        <section>
+          <h3>Functions</h3>
+          <p>Functions are separable, reusable pieces of code.
+          <img src="images/legos.jpg" alt="Pile of legos"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/catzrule/9940388305/">Rick Payette</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>Declaring Functions</h3>
+          <p>To declare (create) a function, you can give it a name, then include all the code for the function inside curly brackets <code>{}</code></p>
+<pre><code class="javascript">function parrotFacts() {
+  console.log('Some parrot species can live for over 80 years');
+  console.log('Kakapos are a critically endangered flightless parrot');
+}
+</code></pre>
+          <p>Functions can have multiple lines.</p>
+        </section>
+
+        <section>
+          <h3>Using Functions</h3>
+          <p>To invoke (use) a function, you type its name, followed by parenthesis <code>()</code></p>
+<pre><code class="javascript"> parrotFacts();</code></pre>
+          <p>We'll talk about what can go inside those parenthesis in a minute! For now, leave them empty.</p>
+        </section>
+
+        <section>
+          <h3>What's going on here?</h3>
+          <p>A function is a group of code you can reuse many times. Whenever you invoke a function by using it's name, you tell the browser to run the code inside the function.</p>
+          <p>You must declare a function before you can use it.</p>
+        </section>
+
+        <section>
+          <h3>Arguments</h3>
+          <p>Functions can accept input values, called <code>arguments</code>.</p>
+<pre><code class="javascript">function callKitten(kittenName){
+  console.log('Come here, ' + kittenName + '!');
+}
+
+callKitten('Fluffy'); // outputs 'Come here, Fluffy!'
+
+function addNumbers(a, b){
+  console.log(a + b);
+}
+
+addNumbers(5, 7);  // outputs 12
+addNumbers(9, 12); // outputs 21
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Arguments</h3>
+          <p>You can also pass <code>variables</code> into functions. These variables do not need to have the same name as the function arguments.</p>
+<pre><code class="javascript">function addOne(num){
+  var newNumber = num + 1;
+  console.log('You now have ' + newNumber);
+}
+
+// Declare variables
+var numberOfKittens = 5;
+var numberOfPuppies = 4;
+
+// Use them in functions
+addOne(numberOfKittens);
+addOne(numberOfPuppies);
+</code></pre>
+        </section>
+                <section>
+            <h2>Arrow Functions</h2>
+            <div class="clear">
+                <div class="halfblock">
+                    <h3 class="green">ES5</h3>
+                    <pre><code contenteditable class ="javascript">var getMessage = function(name) {
+  return 'Hello ' + name + '!';
+}               </code></pre>
+                </div>
+                <div class="halfblock fragment">
+                    <h3 class="green">ES6</h3>
+                    <pre><code contenteditable class ="javascript">const getMessage = name => `Hello ${name}!`;</code></pre>
+                </div>
+
+            </div>
+      </section>
+      <section>
+        <h3 >Making an arrow function:</h3>
+        <ol>
+            <li >Remove the word <code>function</code></li>
+            <li >Place a fat arrow (<code>=></code>) after parameters</li>
+        </ol>
+        <p>Example- <a href="https://codepen.io/beaucarnes/pen/KWEVwQ?editors=0010">https://codepen.io/beaucarnes/pen/KWEVwQ?editors=0010</a></p>
+
+
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <p>Write a simple program to combine a first name and a last name inside a function. Then update the function to accept a first and last name as arguments.</p>
+        </section>
+
+      <!-- returning values -->
+        <section>
+          <h3>Returning Values</h3>
+          <p>You can have a function give you back a value, to use later.</p>
+<pre><code class="javascript">function square(num) {
+  return num * num;
+}
+
+console.log(square(4));       // outputs '16'
+
+var squareOfFive = square(5); // squareOfFive equals '25'
+</code></pre>
+          <p><code>return</code> will immediately end a function.</p>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <p>Add a return statement to your 'name' function. Use that function to set the value of a variable.</p>
+        </section>
+
+      <!-- Variable Scope -->
+        <section>
+          <h3>Variable Scope</h3>
+          <p>The scope of a variable determines where it's value is accessible throughout your program.</p>
+          <img src="images/footprints.jpg" alt="Footprints being washed away"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/heyvikram/187950111/" target="_blank">_vikram</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>Global Scope</h3>
+          <p>A variable declared outside of a function has a <code>global scope</code> and can be accessed anywhere, even inside of functions.</p>
+<pre><code class="javascript">var awesomeConference = 'Beer City Code'; // Global scope
+
+function whatIsAwesome() {
+  console.log(awesomeConference + ' is pretty awesome.'); // Will work
+}
+
+whatIsAwesome();
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Local Scope</h3>
+          <p>A variable declared inside a function has a <code>local scope</code> and can only be accessed within that function.</p>
+<pre><code class="javascript">function whatIsAwesome() {
+  var awesomeConference = 'Beer City Code';              // Local scope
+  console.log(awesomeConference + ' is pretty awesome.'); // Will work
+}
+
+whatIsAwesome();
+
+console.log(awesomeConference + ' is pretty awesome.'); // Won't work
+</code></pre>
+        </section>
+        <section>
+          <h3>Var, Let, Const</h3>
+          <p>Each type of variable has a differnt scope. See the difference <a href="https://codepen.io/beaucarnes/pen/MbMNEG?editors=0012">here</a>.</p>
+        </section>
+
+      <!-- Boolean -->
+
+        <section>
+          <h3>Boolean Variables</h3>
+          <p>Boolean variables represent the logical values <code>true</code> and <code>false</code></p>
+<pre><code class="javascript">var catsAreBest = true;
+var dogsRule = false;
+</code></pre>
+        </section>
+        <section>
+          <h3>Boolean Variables</h3>
+          <p>Some values are considered <code><a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a></code> and will evaluate to <code>false</code> in a Boolean context.</p>
+          <pre><code class="javascript">// the following variables will evaluate as false
+
+var myName = '';
+var numOfKids = 0;
+var isMarried;     // remember a variable with no value is undefined</code></pre>
+          <p><code>null</code> and <code>NaN</code> will also evaluate as <code>false</code>.</p>
+          <p>Everything else evaluates as <code>true</code>.</p>
+          </section>
+
+      <!--If/Then-->
+        <section>
+          <h3>Control Flow</h3>
+          <img src="images/fork-path.jpg" alt="Forked path"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/dennism2/1504087870/" target="_blank">DennisM2</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>The if statement</h3>
+          <p>Use <code>if</code> statements to decide which lines of code to execute, based on a condition.</p>
+<pre><code class="javascript">if (condition) {
+  // statements to execute
+}
+</code></pre>
+<pre><code class="javascript">var age = 30;
+
+if (age &gt; 18) {
+  console.log('You are an adult');
+}</code></pre>
+        </section>
+
+        <section>
+          <h3>Comparison Operators</h3>
+          <table class="smalltext">
+            <thead>
+              <tr>
+                <th>Example</th>
+                <th>Name</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>a == b</code></td>
+                <td>Equal</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is equal to <code>b</code> (can be different types).</td>
+              </tr>
+              <tr>
+                <td><code>a === b</code></td>
+                <td>Identical</td>
+                <td>
+              <strong><code>TRUE</code></strong> if <code>a</code> is equal to <code>b</code>, and the same type. </td>
+              </tr>
+              <tr>
+                <td><code>a != b</code></td>
+                <td>Not equal</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is not equal to <code>b</code> (can be different types).</td>
+              </tr>
+              <tr>
+                <td><code>a !== b</code></td>
+                <td>Not identical</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is not equal to <code>b</code>, or they are not the same type.</td>
+              </tr>
+              <tr>
+                <td><code>a &lt; b</code></td>
+                <td>Less than</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is strictly less than <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a &gt; b</code></td>
+                <td>Greater than</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is strictly greater than <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a &lt;= b</code></td>
+                <td>Less than or equal to </td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is less than or equal to <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a &gt;= b</code></td>
+                <td>Greater than or equal to </td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is greater than or equal to <code>b</code>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h3>Watch out!</h3>
+          <p>Don't mix up <code>=</code> and <code>==</code> and <code>===</code></p>
+          <p><a href="https://codepen.io/beaucarnes/pen/oBbwaN?editors=0012">See on Codepen.</a></p>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <p>Make a variable called "temperature". Write some code that tells you to put on a coat if it is below 50 degrees.</p>
+        </section>
+
+      <!--If/else -->
+        <section>
+          <h3>Even more control flow</h3>
+          <img src="images/toomanysigns.jpg" alt="Sign post with multiple signs"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/thomashawk/2402598275/" target="_blank">Thomas Hawk</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>The if/else statement</h3>
+          <p>Use <code>else</code> to provide an alternate set of instructions.</p>
+<pre><code class="javascript">var age = 30;
+
+if (age &gt;= 16) {
+  console.log('Yay, you can drive!');
+} else {
+  console.log('Sorry, you have ' + (16 - age) +
+  ' years until you can drive.');
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>The if/else statement</h3>
+          <p>If you have multiple conditions, you can use <code>else if</code>.</p>
+<pre><code class="javascript">var age = 30;
+
+if (age &gt;= 35) {
+  console.log('You can vote AND run for President!');
+} else if (age &gt;= 30) {
+  console.log('You can vote AND run for the Senate!');
+} else if (age &gt;= 18) {
+  console.log('You can vote!');
+} else {
+  console.log('You can\'t vote, but you can write your representatives.');
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <p>Modify your "wear a coat" code for these conditions:</p>
+          <ol>
+            <li>If it's less than 50 degrees, wear a coat.</li>
+            <li>If it's less than 30 degrees, wear a coat and a hat.</li>
+            <li>If it's less than 0 degrees, stay inside.</li>
+            <li>Otherwise, wear whatever you want.</li>
+          </ol>
+        </section>
+
+      <!-- Logical Operators -->
+        <section>
+          <h3>Logical Operators</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Example</th>
+                <th>Name</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>a &amp;&amp; b</code></td>
+                <td>And</td>
+                <td><strong><code>TRUE</code></strong> if both <code>a</code> and <code>b</code> are <strong><code>TRUE</code></strong>.</td>
+              </tr>
+              <tr>
+                <td><code>a || b</code></td>
+                <td>Or</td>
+                <td><strong><code>TRUE</code></strong> if either <code>a</code> or <code>b</code> is <strong><code>TRUE</code></strong>.</td>
+              </tr>
+              <tr>
+                <td><code>!a</code></td>
+                <td>Not</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is not <strong><code>TRUE</code></strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h3>Using logical operators</h3>
+          <p>You can use these operators to combine conditions.</p>
+<pre><code class="javascript">var age = 30;
+var yearsAsCitizen = 30;
+
+if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
+  console.log('You can run for the Senate!');
+} else {
+  console.log('You are not eligible to run for the Senate');
+}</code></pre>
+        </section>
+
+
+                <!-- Loops -->
+          <section>
+          <h3>Loops</h3>
+            <img src="images/hula-hoop.jpg" alt="Lego stormtrooper inside key ring"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/steve_pires/8430087504/" target="_blank">Steve Pires</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+          <h3>While loops</h3>
+            <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> will repeat the same code over and over until some condition is met.</p>
+  <pre class="javascript"><code>var bottlesOfBeer = 99;
+
+while (bottlesOfBeer &gt; 0) {
+  console.log(bottlesOfBeer + ' bottles of beer on the wall');
+  bottlesOfBeer = bottlesOfBeer - 1;
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Infinite Loops</h3>
+            <p>Make sure something changes in the loop, or your loop will go on forever...</p>
+            <img src="images/infinite-loop.jpg" alt="Spiral that goes on toward infinity"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/samueljohn/5348462863/" target="_blank">Samuel John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+            <h3>For loops</h3>
+            <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> loops are very similar, but you declare a counter in the statement.</p>
+  <pre><code class="javascript">// will count 1 to 10
+for (var i = 1; i &lt;= 10; i++) {
+  console.log(i);
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Loops and logic</h3>
+            <p>You can add other statements or logical operators inside the loops.</p>
+  <pre><code class="javascript">// Count from 1 to 100
+
+for (var i = 1; i &lt;= 100; i++) {
+  if (i % 3 === 0) {
+    // Says 'Fizz' after multiples of three
+    console.log(' Fizz');
+  } else if (i % 5 === 0) {
+    // Says 'Buzz' after multiples of five
+    console.log(' Buzz');
+  } else {
+    console.log(i);
+  }
+}</code></pre>
+          </section>
+
+          <section>
+          <h3>Break</h3>
+            <p>To exit a loop, use the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a></code> statement.</p>
+  <pre><code class="javascript">// Count from 100 to 200
+for (var i = 100; i &lt;= 200; i++) {
+  console.log('Testing ' + i);
+
+  //Stop at the first multiple of 7
+  if (i % 7 == 0) {
+    console.log('Found it! ' + i);
+    break;
+  }
+}</code></pre>
+          </section>
+
+
+
+          <section>
+          <h3>Try It</h3>
+          <p>Write a loop that gives you the 9's times table,<br /> from <strong>9 x 1 = 9</strong> to <strong>9 x 12 = 108</strong>.</p><br />
+          <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
+          </section>
+
+        <!-- Arrays -->
+
+          <section>
+            <h3>Arrays</h3>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Arrays</a> are ordered lists of values.</p>
+  <pre><code class="javascript">var arrayName = [value0, value1];</code></pre><br />
+            <p>You can put different types of data into an array.</p>
+  <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
+
+var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];</code></pre>
+          </section>
+
+          <section>
+            <h3>Array Length</h3>
+            <p>The <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length">length</a></code> property tells you how many things are in an array.</p>
+  <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+
+console.log(rainbowColors.length);</code></pre>
+          </section>
+
+          <section>
+            <h3>Using Arrays</h3>
+            <p>You can access items with <strong>bracket notation</strong> by using the position of the item you want.</p>
+  <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+
+var firstColor = rainbowColors[0];
+var lastColor  = rainbowColors[6];</code></pre><br>
+  <p>JS arrays are <strong>zero-indexed</strong>, so counting starts at 0.</p>
+          </section>
+
+          <section>
+            <h3>Changing arrays</h3>
+            <p>You can use bracket notation to change an item in an array</p>
+  <pre><code class="javascript">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+
+myFavoriteThings[0] = 'Asparagus';</code></pre>
+          </section>
+
+          <section>
+            <h3>Expanding arrays</h3>
+            <p>Arrays do not have a fixed length. You can use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push</a></code> to add something to an array.</p>
+  <pre><code class="javascript">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+
+myFavoriteThings.push('Dancing');</code></pre>
+          </section>
+
+          <section>
+            <h3>Try It</h3>
+            <p>Create an array of your favorite foods. <br />Print a few values onto your screen.</p>
+          </section>
+
+        <!-- Arrays and loops-->
+
+          <section>
+            <h3>Iterating through arrays</h3>
+            <p>Use a <code>for</code> loop to easily work with each item in an array.</p>
+  <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
+
+for (var i = 0; i &lt; rainbowColors.length; i++) {
+  console.log(rainbowColors[i]);
+}</code></pre>
+          </section>
+
+          <section>
+            <h3>Try It</h3>
+            <p>Use a <code>for</code> loop to print a list of all your favorite foods.</p>
+          </section>
+
+      <!-- Objects -->
+
+        <section>
+          <h3>Objects</h3>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Objects</a> let us store a collection of properties.</p>
+<pre><code class="javascript">var objectName = {
+  propertyName: propertyValue,
+  propertyName: propertyValue
+};
+</code></pre>
+<pre><code class="javascript">var user = {
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn',
+  likes: ['knitting', 'code'],
+  birthday: {month: 10, day: 17}
+};</code></pre>
+        </section>
+
+        <section>
+          <h3>Accessing Objects</h3>
+          <p>You can retrieve values using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation">dot notation</a></strong></p>
+<pre><code class="javascript">var user = {
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn'
+};
+
+var usersHometown = user.hometown;</code></pre><br>
+          <p>Or using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">bracket notation</a></strong> (like arrays)</p>
+<pre><code class="javascript">var usersHair = user['hair'];</code></pre>
+        </section>
+
+        <section>
+          <h3>Changing Objects</h3>
+          <p>Change properties</p>
+<pre><code class="javascript">var user = {
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn'
+};
+
+user.hair = 'blue';</code></pre>
+          <p>Add new properties</p>
+<pre><code class="javascript">user.married = true;
+</code></pre><br>
+          <p>Or delete them</p>
+<pre><code class="javascript">delete user.married;</code></pre>
+        </section>
+
+        <section>
+          <h3>Arrays of Objects</h3>
+          <p>Because arrays can hold any data type, they can also hold objects.</p>
+<pre><code class="javascript">var users = [
+  {name: 'Jolene', age: 21},
+  {name: 'Alexa',  age: 18}
+];
+
+for (var i = 0; i &lt; users.length; i++) {
+  var user = users[i];
+  console.log(user.name + ' is ' + user.age + ' years old.');
+}</code></pre>
+        </section>
+
+        <section>
+          <h3>Objects</h3>
+          <p>Just like other data types, objects can be passed into functions:</p>
+<pre><code class="javascript">var jolene = {
+  age: 21,
+  hairColor: 'Auburn',
+  likes: ['pizza', 'tacos'],
+  birthday: {month: 3, day: 14, year: 1995}
+}
+
+function describeUser(user) {
+  console.log('You are ' + user.age + ' years old with '
+  + user.hairColor + ' hair.');
+}
+
+describeUser(jolene);</code></pre>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <p>Create an object to hold information on your favorite recipe. It should have properties for:</p>
+          <ul>
+            <li><code>recipeTitle</code> (a string)</li>
+            <li><code>servings</code> (a number)</li>
+            <li><code>ingredients</code> (an array of strings)</li>
+            <li><code>directions</code> (a string)</li>
+          </ul>
+          <br><br>
+          <p>Try displaying some information about your recipe.</p>
+          <p>Bonus: Create a loop to list all the ingredients.</p>
+        </section>
+
+      <!-- Object Methods -->
+        <section>
+          <h3>Object methods</h3>
+          <p>Objects can also hold functions.</p>
+<pre><code class="javascript">var jolene = {
+  age: 21,
+  hairColor: 'Auburn',
+  talk: function() {
+    console.log('Hello!');
+  },
+  eat: function(food) {
+    console.log('Yum, I love ' + food);
+  }
+};
+</code></pre><br>
+          <p>Call object methods using dot notation:</p>
+<pre><code class="javascript">jolene.talk();
+
+jolene.eat('pizza');</code></pre>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <p>Go back to your recipe object. Add a function called <code>letsCook</code> that says "I'm hungry! Let's cook..." with the name of your recipe title.</p>
+          <p>Call your new method.</p>
+        </section>
+
+                            <section>
+                      <h3>More loops</h3>
+                      <p>There are other types of loops, too!</p>
+            <pre><code class="javascript">
+var array1 = ['a', 'b', 'c'];
+
+array1.forEach(function(element) {
+  console.log(element);
+});</code></pre>
+          <p>For each / for of loops - 
+            <a href="http://v.ht/beer-for">http://v.ht/beer-for</a></p>
+        </section>
+
+        <!--Accessing the DOM-->
+          <section>
+            <h3>DOM Access</h3>
+            <p>Your browser automatically loads the content of a webpage into a <code>Document</code> object which serves as the entry point into a web page's content.</p><br>
+            <p><strong>Using the <code>document</code> you can:</strong></p>
+            <ol>
+              <li>Change the content tree any way you want.</li>
+              <li>Build an HTML document from scratch.</li>
+              <li>Access or replace any existing DOM nodes (HTML elements in the DOM).</li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Finding Nodes</h3>
+            <img src="images/search.jpg" alt="A magnifying glass"/>
+            <p class="credit">Photo credit:  <a href="https://flic.kr/p/4UokrH">Jeffery Beall</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+          </section>
+
+          <section>
+            <h3>DOM Access: By Id</h3>
+            <p>You can find nodes by <code>id</code> using the method:</p>
+<pre><code class="javascript">document.getElementById(id);
+</code></pre>
+          <p>For example, to find:</p>
+<pre><code class="html">&lt;img id="kittenPic" src="http://placekitten.com/g/200/300" alt="cat"/&gt;
+</code></pre>
+          <p>We would use:</p>
+<pre><code class="javascript">var imgKitten = document.getElementById('kittenPic');
+</code></pre>
+          </section>
+
+          <section>
+            <h3>DOM Access: Class & Query</h3>
+            <p>You can use methods <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName">getElementsByClassName</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a></code>, and <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">querySelectorAll</a></code>.</p><br>
+<pre><code class="javascript">document.getElementsByClassName(className);
+</code></pre><br>
+
+<pre><code class="javascript">document.querySelector(cssQuery);
+document.querySelectorAll(cssQuery);
+</code></pre>
+          </section>
+
+          <section>
+            <h3>getElement vs. getElements</h3>
+            <p>Any method that starts with <code>getElement</code> will return a <strong>single</strong> node.</p>
+<pre><code class="javascript">document.getElementById('uniqueID'); // returns a single node
+</code></pre><br>
+          <p>Any method that starts with <code>getElements</code> will return an <strong>array</strong> of nodes. To modify a single node, you will need to use bracket notation to get the correct one.</p>
+<pre><code class="javascript">document.getElementsByTagName('p'); // returns multiple nodes
+
+var specificParagraph = document.getElementsByTagName('p')[2];
+</code></pre>
+          </section>
+
+        <!--Manipulating the DOM-->
+          <section>
+            <h3>Changing Nodes</h3>
+            <img src="images/two-color.jpg" alt="Red and yellow tulip"/>
+            <p class="credit">Photo credit:  <a href="https://flic.kr/p/bCYp2S">Darryl Kenyon</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+          </section>
+
+          <section>
+            <h3>DOM Nodes: Attributes</h3>
+            <p>You can access and change attributes of DOM nodes using dot notation.</p>
+            <p>To change this element:</p>
+<pre><code class="html">&lt;img id="kittenPic" src="http://placekitten.com/g/200/300" alt="cat"/&gt;
+</code></pre>
+            <p>We could change the src attribute this way:</p>
+<pre><code class="javascript">var imgKitten = document.getElementById('kittenPic');
+
+// will return src attribute on image
+imgKitten.src
+
+// will set our src to a new src
+imgKitten.src = 'http://placekitten.com/g/600/500';</code></pre>
+          </section>
+
+          <section>
+            <h3>DOM Nodes: Getting and Setting Attributes</h3>
+            <p>You can also use <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">getAttribute</a></code> or <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute">setAttribute</a></code></p>
+<pre><code class="html">&lt;img id="kittenPic" src="http://placekitten.com/g/200/300" alt="cat"/&gt;
+</code></pre>
+          <p>We could change the src attribute this way:</p>
+<pre><code class="javascript">var imgKitten = document.getElementById('kittenPic');
+
+// will return src attribute on image
+imgKitten.getAttribute('src');
+
+// will set our src to a new src
+imgKitten.setAttribute('src', 'http://placekitten.com/g/600/500');</code></pre>
+          </section>
+
+          <section>
+            <h3>DOM Nodes: Styles</h3>
+            <p>You can change page css using <code>style</code></p>
+            <p>To make this CSS:</p>
+<pre><code class="css">body {
+  color: red;
+}
+</code></pre>
+          <p>Use this JavaScript:</p>
+<pre><code class="javascript">var pageBody = document.getElementsByTagName('body')[0];
+
+pageBody.style.color = 'red';</code></pre>
+          </section>
+
+          <section>
+            <h3>DOM Nodes: More Styles</h3>
+            <p>The rule of thumb in JavaScript is to change CSS styles with a "<code>-</code>" to <a href="https://en.wikipedia.org/wiki/CamelCase">camelCase</a>.</p>
+            <p>To make this CSS:</p>
+<pre><code class="css">body {
+  background-color: pink;
+  padding-top: 10px;
+}
+</code></pre>
+          <p>Use this JavaScript:</p>
+<pre><code class="javascript">var pageBody = document.getElementsByTagName('body')[0]
+
+pageBody.style.backgroundColor = 'pink';
+
+pageBody.style.paddingTop = '10px';
+</code></pre>
+          </section>
+
+          <section>
+          <h3>Try It</h3>
+          <p>Create a simple HTML page.</p>
+          <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p>
+          </section>
+
+        <!--Manipulating the DOM-->
+          <section>
+            <h3>DOM innerHTML</h3>
+            <p>Each DOM node has an <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">innerHTML</a></code> property with the HTML and content of its children. You can use the property to view or change the HTML of a node.</p>
+            <p>To put content in this paragraph element:</p>
+  <pre><code class="html">&lt;p id="warning"&gt;&lt;/p&gt;</code></pre>
+            <p>We can select the node and modify it</p>
+  <pre><code class="javascript">var warningParagraph = document.getElementById('warning');
+
+warningParagraph.innerHTML = 'Danger Will Robinson!';</code></pre>
+          </section>
+
+          <section>
+            <h3>Creating New Nodes</h3>
+            <p>The <code>document</code> object also has methods to create nodes from scratch:</p>
+  <pre><code class="javascript">document.createElement(tagName);
+
+document.createTextNode(text);
+
+element.appendChild(element);</code></pre>
+          </section>
+
+          <section>
+            <h3>Creating New Nodes: Sample Code</h3>
+<pre><code class="javascript">var pageBody = document.getElementsByTagName('body')[0];
+
+// create our image tag with attributes
+var newImg = document.createElement('img');
+newImg.src = 'http://placekitten.com/g/500/200';
+newImg.style.border = '1px solid black';
+
+// add our image to the body
+pageBody.appendChild(newImg);
+
+// create a paragraph tag with content
+var newParagraph  = document.createElement('p');
+var paragraphText = document.createTextNode('Squee!');
+newParagraph.appendChild(paragraphText);
+
+// add our new paragraph to the body
+pageBody.appendChild(newParagraph);</code></pre>
+            </section>
+
+            <section>
+            <h3>Try It</h3>
+            <p>Create a new paragraph element and add it to a <code>div</code> on your page.</p>
+          </section>
+
+      <!-- Events -->
+
+        <section>
+          <h3>Events</h3>
+          <p>An <strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events">event</a></strong> is an object that is sent when actions take place on your webpage, most often when a user interacts with your webpage.</p><br>
+          <p>For example, JavaScript creates an event when a user clicks an element.</p>
+<pre><code class="javascript">element.addEventListener('click', function(event) {
+  // code to be executed when user clicks
+});
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Types of Events</h3>
+          <p>There are a <a href="https://developer.mozilla.org/en-US/docs/Web/Events">variety of events</a>. Some of the more common events are:</p>
+          <ul>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a>:</strong> Occurs when the user clicks on an element</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseover">mouseover</a>:</strong> Occurs when the pointer is moved onto an element</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseout">mouseout</a>:</strong> Occurs when the pointer is moved off an element</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/keyup">keyup</a>:</strong> Occurs when the user releases a key</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/load_(ProgressEvent)">load</a>:</strong> Occurs when a document has been loaded</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/focus">focus</a>:</strong> Occurs when an element gets focus</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/blur">blur</a>:</strong> Occurs when an element loses focus</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Calling Functions from HTML</h3>
+          <p>You can call a function directly from your HTML code:</p>
+<pre><code class="html">&lt;button id="myBtn" onclick="sayHi()"&gt;Click Me!&lt;/button&gt;
+</code></pre>
+<pre><code class="javascript">function sayHi (event) {
+  alert('Hi!');
+};</code></pre>
+        </section>
+
+          <section>
+          <h3>Calling from JS</h3>
+          <p>You can call a function from the addEventListener:</p>
+<pre><code class="html">&lt;button id="myBtn"&gt;Click Me!&lt;/button&gt;
+</code></pre>
+<pre><code class="javascript">var button = document.getElementById("myBtn");
+
+button.addEventListener("click", function (event) {
+  alert("Hi!");
+});</code></pre>
+<p>or</p>
+<pre><code class="javascript">var button = document.getElementById("myBtn");
+
+var sayHi = function (event) {
+  alert("Hi!");
+};
+
+button.addEventListener("click", sayHi);</code></pre>
+        </section>
+
+
+        <section>
+          <h3>Try It</h3>
+          <p>Go back to the sample files you downloaded earlier.</p>
+          <p>Make some JavaScript code fire after a <code>mouseover</code> event.</p>
+        </section>
+
+
+        <section>
+          <h3>Forms</h3>
+          <p>You can collect information from users to use in your code. The most common method is an HTML form</p>
+<pre><code class="html">&lt;form id="userForm"&gt;
+  &lt;label for="name"&gt;First Name:&lt;/label&gt;
+  &lt;input type="text" id="firstName"/&gt;
+  &lt;input type="radio" name="married" value="Yes" checked /&gt; Yes
+  &lt;input type="radio" name="married" value="No" /&gt; No
+  &lt;input type="submit" id="submitBtn" value="Submit" /&gt;
+&lt;/form&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Retrieving Form Data</h3>
+          <p>You retrieve the values of form elements using the <code>value</code> method.</p>
+<pre><code class="javascript">var name = document.getElementById('firstName').value;
+console.log(name);
+</code></pre>
+          <p>You can retrieve the value of a form at any time. Even when an event like <code>blur</code> is triggered (when a form element loses focus).</p>
+        </section>
+
+        <section>
+          <h3>Radio Buttons</h3>
+          <p>Radio buttons usually do not have IDs, so you will need to use a <code>for</code> loop to get the value on each radio:</p>
+<pre><code class="javascript">var radios = document.getElementsByName('married');
+
+var length = radios.length;
+
+for (var i = 0; i &lt; length; i++) {
+  if (radios[i].checked) {
+    var radioButtonValue = radios[i].value;
+    // only one radio can be checked, so stop now
+    break;
+  }
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Submit buttons</h3>
+          <p>If you are going to retrieve form values with the submit button, be sure to prevent the default action!</p>
+<pre><code class="javascript">var submitButton = document.getElementById('submitBtn');
+
+submitButton.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var name = document.getElementById('firstName').value;
+  console.log(name);
+})
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Try It</h3>
+          <p>Collect a value from the input box on the page. Use it inside a function of some kind. For example, collect a number and multiply it by five or collect a name and display a greeting.</p>
+        </section>
+<section>
+  <section>
+    <h3>Tic-Tac-Toe</h3>
+    <p>The final project is creating a tic tac toe game similar to <a href="https://codepen.io/beaucarnes/pen/vKJGZa">this.</a>
+    <p>If you need help, you can use this code to start with: <a href="http://v.ht/beer-toe">http://v.ht/beer-toe</a></p><br>
+    If you need an extra challenge, you can make the computer impossible to beat like this version: <a href="http://v.ht/beer-toe-advanced">http://v.ht/beer-toe-advanced</a> </p>
+  </section>
+</section>
+</section>
+
+
+</div><!-- END SLIDES DIV -->
+
+<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal/js/reveal.js"></script>
+
+<script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+        { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+        { src: 'reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+      Reveal.configure({ slideNumber: 'c / t' });
+    </script>
+
+  </body>
+  </html>

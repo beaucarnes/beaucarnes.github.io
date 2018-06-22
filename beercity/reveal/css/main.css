@@ -1,0 +1,23 @@
+.slides .footer{
+  position:absolute;
+  bottom: -200px;
+  left: 250px;
+}
+
+.timer {
+  position: absolute;
+  top: 0px;
+  left: -100px;
+}
+
+section.table-32px {
+  font-size: 32px;
+}
+
+section.table-23px {
+  font-size: 23px;
+}
+
+section.align-left p {
+  text-align: left;
+}
