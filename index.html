@@ -40,6 +40,65 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PkZNo7MFNFg?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bKsaQTWE_kI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<style>
+    #playerWrap {
+        display: inline-block;
+        position: relative;
+    }
+    #playerWrap.shown::after {
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+        background-color: black;
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: 64px 64px;
+        background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgNTEwIDUxMCI+PHBhdGggZD0iTTI1NSAxMDJWMEwxMjcuNSAxMjcuNSAyNTUgMjU1VjE1M2M4NC4xNSAwIDE1MyA2OC44NSAxNTMgMTUzcy02OC44NSAxNTMtMTUzIDE1My0xNTMtNjguODUtMTUzLTE1M0g1MWMwIDExMi4yIDkxLjggMjA0IDIwNCAyMDRzMjA0LTkxLjggMjA0LTIwNC05MS44LTIwNC0yMDQtMjA0eiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==);
+    }
+</style>
+<div>
+    <div id="playerWrap">
+        <iframe
+            width="640" height="360"
+            src="https://www.youtube.com/embed/u7n9t1cBei8?enablejsapi=1"
+            frameborder="0"
+        ></iframe>
+    </div>
+</div>
+<script>
+  var playerFrame = document.currentScript.previousElementSibling.children[0].children[0];
+
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player(playerFrame, {
+      videoId: 'M7lc1UVf-VE',
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.ENDED) {
+        document.getElementById("playerWrap").classList.add("shown");
+    }
+  }
+
+  document.getElementById("playerWrap").addEventListener("click", function() {
+    player.seekTo(0);
+    document.getElementById("playerWrap").classList.remove("shown");
+  });
+</script>
+
 </div>
 </body>
 <script>
